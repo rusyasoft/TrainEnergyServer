@@ -1,0 +1,2 @@
+python react.py ./tmp -p '*.xlsx' 'echo $f'
+
