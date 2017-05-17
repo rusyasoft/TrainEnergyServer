@@ -198,3 +198,91 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/socket.py", line 476, in readline
     data = self._sock.recv(self._rbufsize)
 error: [Errno 104] Connection reset by peer
+Sorry, try again.
+mongod --help for help and startup options
+Wed May 17 11:44:33.972 
+Wed May 17 11:44:33.972 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Wed May 17 11:44:33.972 
+Wed May 17 11:44:33.989 [initandlisten] MongoDB starting : pid=19884 port=27017 dbpath=/data/db/ 32-bit host=rustam-G31M-ES2L
+Wed May 17 11:44:33.989 [initandlisten] 
+Wed May 17 11:44:33.989 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed May 17 11:44:33.989 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed May 17 11:44:33.989 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed May 17 11:44:33.989 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed May 17 11:44:33.989 [initandlisten] 
+Wed May 17 11:44:33.989 [initandlisten] db version v2.4.9
+Wed May 17 11:44:33.989 [initandlisten] git version: nogitversion
+Wed May 17 11:44:33.989 [initandlisten] build info: Linux comet 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 i686 BOOST_LIB_VERSION=1_54
+Wed May 17 11:44:33.989 [initandlisten] allocator: tcmalloc
+Wed May 17 11:44:33.989 [initandlisten] options: {}
+************** 
+Unclean shutdown detected.
+Please visit http://dochub.mongodb.org/core/repair for recovery instructions.
+*************
+Wed May 17 11:44:33.990 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+Wed May 17 11:44:33.990 dbexit: 
+Wed May 17 11:44:33.990 [initandlisten] shutdown: going to close listening sockets...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: going to flush diaglog...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: going to close sockets...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: waiting for fs preallocator...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: closing all files...
+Wed May 17 11:44:33.990 [initandlisten] closeAllFiles() finished
+Wed May 17 11:44:33.990 dbexit: really exiting now
+mongod --help for help and startup options
+Wed May 17 11:44:40.914 
+Wed May 17 11:44:40.915 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Wed May 17 11:44:40.915 
+Wed May 17 11:44:40.931 [initandlisten] MongoDB starting : pid=19891 port=27017 dbpath=/data/db/ 32-bit host=rustam-G31M-ES2L
+Wed May 17 11:44:40.931 [initandlisten] 
+Wed May 17 11:44:40.931 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed May 17 11:44:40.931 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed May 17 11:44:40.931 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed May 17 11:44:40.931 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed May 17 11:44:40.931 [initandlisten] 
+Wed May 17 11:44:40.931 [initandlisten] db version v2.4.9
+Wed May 17 11:44:40.931 [initandlisten] git version: nogitversion
+Wed May 17 11:44:40.931 [initandlisten] build info: Linux comet 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 i686 BOOST_LIB_VERSION=1_54
+Wed May 17 11:44:40.931 [initandlisten] allocator: tcmalloc
+Wed May 17 11:44:40.931 [initandlisten] options: {}
+************** 
+Unclean shutdown detected.
+Please visit http://dochub.mongodb.org/core/repair for recovery instructions.
+*************
+Wed May 17 11:44:40.932 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+Wed May 17 11:44:40.932 dbexit: 
+Wed May 17 11:44:40.932 [initandlisten] shutdown: going to close listening sockets...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: going to flush diaglog...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: going to close sockets...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: waiting for fs preallocator...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: closing all files...
+Wed May 17 11:44:40.932 [initandlisten] closeAllFiles() finished
+Wed May 17 11:44:40.932 dbexit: really exiting now
+mongod --help for help and startup options
+Wed May 17 11:44:48.533 
+Wed May 17 11:44:48.533 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Wed May 17 11:44:48.533 
+Wed May 17 11:44:48.549 [initandlisten] MongoDB starting : pid=19898 port=27017 dbpath=/data/db/ 32-bit host=rustam-G31M-ES2L
+Wed May 17 11:44:48.550 [initandlisten] 
+Wed May 17 11:44:48.550 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed May 17 11:44:48.550 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed May 17 11:44:48.550 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed May 17 11:44:48.550 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed May 17 11:44:48.550 [initandlisten] 
+Wed May 17 11:44:48.550 [initandlisten] db version v2.4.9
+Wed May 17 11:44:48.550 [initandlisten] git version: nogitversion
+Wed May 17 11:44:48.550 [initandlisten] build info: Linux comet 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 i686 BOOST_LIB_VERSION=1_54
+Wed May 17 11:44:48.550 [initandlisten] allocator: tcmalloc
+Wed May 17 11:44:48.550 [initandlisten] options: {}
+************** 
+Unclean shutdown detected.
+Please visit http://dochub.mongodb.org/core/repair for recovery instructions.
+*************
+Wed May 17 11:44:48.550 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+Wed May 17 11:44:48.550 dbexit: 
+Wed May 17 11:44:48.550 [initandlisten] shutdown: going to close listening sockets...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: going to flush diaglog...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: going to close sockets...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: waiting for fs preallocator...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: closing all files...
+Wed May 17 11:44:48.550 [initandlisten] closeAllFiles() finished
+Wed May 17 11:44:48.550 dbexit: really exiting now
