@@ -95,6 +95,7 @@ def on_connect(client, userdata, flags, rc):
    print "Connected to MQTT Broker with result code ", str(rc)
 
    client.subscribe("/keti/energy/fromgw")
+   client.subscribe("/keti/energy/statusrequest")
    print "Subscribed to topic /keti/energy/fromgw"
 
 Trains = dict() #dictionaries of Train, key is trainID
@@ -139,6 +140,12 @@ initializeTrainTables(Trains, bigTable)
 def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "hh:mm" format
    json_response = ""
    schedule_list = bigTable.requestCurrentStatus(str_curtime)
+
+   # if None is returned as a schedule_list then dont bother to do further processing
+   # just return no Train Available at this time
+   if schedule_list == None:
+      # pass
+      return '{"response_msg": "No Subway available at this time"}'
 
    subway_wrap = dict()
    #subw = dict()
@@ -258,8 +265,8 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
       self.send_header('Content-type','text/html')
       self.end_headers()
       #self.wfile.write("Hello World!!!!")
-      #jsondumps = wrapSubwayTotalInfo(Trains, bigTable, "15:03")
-      jsondumps = wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+      jsondumps = wrapSubwayTotalInfo(Trains, bigTable, "10:33")
+      #jsondumps = wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
       
       self.wfile.write(jsondumps) #json.dumps(subway_wrap))
       return
@@ -268,7 +275,13 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
 
 
 def on_message(client, userdata, msg):
+
+   # check for the status request message
+   if msg.topic=="/keti/energy/statusrequest":
+      client.publish("/keti/energy/systemstatus", '{"nodename":"MainServer", "status":"on"}')
+      return 
    print msg.topic,"->", str(msg.payload)
+
    o = json.loads(msg.payload)
 
 
@@ -387,7 +400,7 @@ mqtt_client = mqtt.Client(userdata=db)
 mqtt_client.on_connect = on_connect
 mqtt_client.on_message = on_message
 
-mqtt_client.connect('117.16.136.173', 1883, 60)
+mqtt_client.connect('117.16.136.173', 1883, 600)
 
 
 
