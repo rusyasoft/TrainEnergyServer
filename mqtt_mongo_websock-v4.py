@@ -114,10 +114,11 @@ def initializeTrainTables(Trains, bigTable):
       Trains[subwayNum] = Train.Train(subwayNum)
 
       #adding 12 dummy sensor nodes
+      temporary_temp_int = int(time.strftime("%M"))
       for i in range(1,13):
          curTrain_DummySensorNode = SensorNode.SensorNode(i, 'TempHum', False)
-         curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'farenheit', 13)
-         curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', 13)
+         curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'farenheit', temporary_temp_int) #13)
+         curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int) #13)
          Trains[subwayNum].sensorNodes[i] = curTrain_DummySensorNode
 
 
@@ -140,6 +141,10 @@ initializeTrainTables(Trains, bigTable)
 def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "hh:mm" format
    json_response = ""
    schedule_list = bigTable.requestCurrentStatus(str_curtime)
+
+   #temporary temp
+   temporary_temp_int = int(time.strftime("%M"))
+
 
    # if None is returned as a schedule_list then dont bother to do further processing
    # just return no Train Available at this time
@@ -179,8 +184,10 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
             listofTemperatureSensors.append(curTrain_SensorNodes[sensors].sensors['temp'])
          
          numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
+
+         #temporary temperature
          for i in range(numofnecessaryDummyTemps):
-            temporarySensor = Sensor.Sensor('temp', 'farenheit', 13)
+            temporarySensor = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
             listofTemperatureSensors.append(temporarySensor)
 
          print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
@@ -223,7 +230,7 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
 
          numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
          for i in range(numofnecessaryDummyTemps):
-            temporarySensor = Sensor.Sensor('temp', 'farenheit', 13)
+            temporarySensor = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
             listofTemperatureSensors.append(temporarySensor)
 
          print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
@@ -265,8 +272,8 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
       self.send_header('Content-type','text/html')
       self.end_headers()
       #self.wfile.write("Hello World!!!!")
-      jsondumps = wrapSubwayTotalInfo(Trains, bigTable, "10:33")
-      #jsondumps = wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+      #jsondumps = wrapSubwayTotalInfo(Trains, bigTable, "10:33")
+      jsondumps = wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
       
       self.wfile.write(jsondumps) #json.dumps(subway_wrap))
       return

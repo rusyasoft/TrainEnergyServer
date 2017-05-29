@@ -286,3 +286,21 @@ Wed May 17 11:44:48.550 [initandlisten] shutdown: waiting for fs preallocator...
 Wed May 17 11:44:48.550 [initandlisten] shutdown: closing all files...
 Wed May 17 11:44:48.550 [initandlisten] closeAllFiles() finished
 Wed May 17 11:44:48.550 dbexit: really exiting now
+66.102.6.111 - - [26/May/2017 18:34:32] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.109 - - [26/May/2017 18:34:33] "GET / HTTP/1.1" 200 -
+66.102.6.113 - - [26/May/2017 22:23:25] "GET / HTTP/1.1" 200 -
+66.102.6.113 - - [26/May/2017 22:23:26] "GET /favicon.ico HTTP/1.1" 200 -
+27.117.217.82 - - [26/May/2017 22:24:28] "GET / HTTP/1.1" 200 -
+27.117.217.82 - - [26/May/2017 22:24:29] "GET /favicon.ico HTTP/1.1" 200 -
+91.197.235.10 - - [27/May/2017 09:23:16] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'\xe0\x00\x00\x00\x00\x00Cookie:")
+91.197.235.10 - - [27/May/2017 09:23:16] "  ,'à     Cookie: mstshash=eltons" 400 -
+66.102.6.109 - - [27/May/2017 11:52:17] "GET / HTTP/1.1" 200 -
+66.102.6.109 - - [27/May/2017 11:52:17] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.111 - - [27/May/2017 12:56:15] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.111 - - [28/May/2017 20:34:09] "GET / HTTP/1.1" 200 -
+66.102.6.111 - - [28/May/2017 20:34:10] "GET /favicon.ico HTTP/1.1" 200 -
+27.117.217.82 - - [29/May/2017 01:41:30] "GET / HTTP/1.1" 200 -
+27.117.217.82 - - [29/May/2017 01:41:30] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.113 - - [29/May/2017 06:39:58] "GET /favicon.ico HTTP/1.1" 200 -
+203.249.87.187 - - [29/May/2017 10:07:40] "POST / HTTP/1.1" 200 -
+203.249.87.187 - - [29/May/2017 10:07:40] "POST / HTTP/1.1" 200 -
