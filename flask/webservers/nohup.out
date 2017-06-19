@@ -1,0 +1,654 @@
+--
+106.252.229.57 - - [05/Apr/2017 10:05:37] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 10:05:38] "GET /favicon.ico HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 10:24:30] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 10:24:30] "GET /favicon.ico HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 12:21:55] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 12:21:55] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 12:21:56] "GET /favicon.ico HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 13:41:50] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [05/Apr/2017 13:41:50] "GET /favicon.ico HTTP/1.1" 200 -
+203.254.173.42 - - [05/Apr/2017 18:02:45] "GET / HTTP/1.1" 200 -
+66.102.6.204 - - [05/Apr/2017 19:33:01] "GET / HTTP/1.1" 200 -
+66.102.6.204 - - [05/Apr/2017 19:33:02] "GET /favicon.ico HTTP/1.1" 200 -
+203.249.87.196 - - [05/Apr/2017 20:07:00] "GET / HTTP/1.1" 200 -
+203.249.87.196 - - [05/Apr/2017 20:07:00] "GET /favicon.ico HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:19:42] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:19:42] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:26:56] "GET / HTTP/1.1" 200 -
+203.249.87.196 - - [05/Apr/2017 20:36:17] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:36:17] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:36:17] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:36:17] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:36:17] "GET / HTTP/1.1" 200 -
+203.249.87.196 - - [05/Apr/2017 20:36:17] "GET /favicon.ico HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:46:28] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:54:16] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:54:42] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:55:48] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:56:24] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 20:57:39] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:08:23] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:14:09] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:15:01] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:17:00] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:17:05] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:17:08] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:19:05] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:21:50] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:24:19] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:35:29] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:35:34] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:35:39] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:35:44] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:35:49] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:35:54] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:35:59] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:36:04] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:36:09] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:36:14] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:38:40] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:38:44] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:38:50] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:40:19] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:40:24] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:40:29] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:40:34] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:40:39] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:40:44] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:40:49] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:41:39] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:41:44] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:41:49] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:41:54] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:41:59] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:11] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:17] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:21] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:26] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:31] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:51] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:53] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [05/Apr/2017 21:48:53] "GET / HTTP/1.1" 200 -
+203.254.173.42 - - [06/Apr/2017 09:33:07] "GET / HTTP/1.1" 200 -
+203.254.173.42 - - [06/Apr/2017 09:33:12] "GET / HTTP/1.1" 200 -
+203.254.173.42 - - [06/Apr/2017 09:33:17] "GET / HTTP/1.1" 200 -
+203.254.173.42 - - [06/Apr/2017 09:33:22] "GET / HTTP/1.1" 200 -
+203.254.173.42 - - [06/Apr/2017 09:33:27] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [06/Apr/2017 10:01:54] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [06/Apr/2017 10:01:54] "GET /favicon.ico HTTP/1.1" 200 -
+106.252.229.57 - - [06/Apr/2017 17:49:14] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [06/Apr/2017 17:49:14] "GET /favicon.ico HTTP/1.1" 200 -
+203.249.87.196 - - [06/Apr/2017 17:55:52] "GET / HTTP/1.1" 200 -
+203.249.87.196 - - [06/Apr/2017 17:56:15] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.204 - - [06/Apr/2017 19:19:17] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:30:37] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:31:47] "GET / HTTP/1.1" 200 -
+203.249.87.196 - - [06/Apr/2017 20:32:11] "GET / HTTP/1.1" 200 -
+203.249.87.196 - - [06/Apr/2017 20:32:11] "GET /favicon.ico HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:34:00] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:34:00] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:34:50] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:35:22] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:35:22] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:37:25] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:52:55] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:53:00] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:53:05] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:16] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:21] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:26] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:38] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:43] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:48] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:53] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:55:58] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 20:56:12] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 21:01:48] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 21:01:53] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 21:02:42] "GET / HTTP/1.1" 200 -
+203.249.87.187 - - [06/Apr/2017 21:02:47] "GET / HTTP/1.1" 200 -
+203.249.87.196 - - [06/Apr/2017 21:10:01] "GET / HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 310, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python2.7/socket.py", line 476, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+66.102.6.204 - - [07/Apr/2017 21:54:42] "GET / HTTP/1.1" 200 -
+66.102.6.208 - - [07/Apr/2017 21:54:43] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.208 - - [09/Apr/2017 00:24:34] "GET / HTTP/1.1" 200 -
+66.102.6.206 - - [09/Apr/2017 00:24:34] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.206 - - [09/Apr/2017 14:46:53] "GET /favicon.ico HTTP/1.1" 200 -
+93.170.141.226 - - [09/Apr/2017 20:39:27] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+93.170.141.226 - - [09/Apr/2017 20:39:27] "  +&‡     Cookie: mstshash=hello" 400 -
+1.228.182.178 - - [09/Apr/2017 23:44:34] "GET / HTTP/1.1" 200 -
+1.228.182.178 - - [09/Apr/2017 23:44:34] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.208 - - [09/Apr/2017 23:57:35] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.206 - - [09/Apr/2017 23:57:36] "GET / HTTP/1.1" 200 -
+93.170.141.226 - - [10/Apr/2017 01:49:09] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+93.170.141.226 - - [10/Apr/2017 01:49:09] "  +&‡     Cookie: mstshash=hello" 400 -
+93.170.141.226 - - [10/Apr/2017 07:10:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+93.170.141.226 - - [10/Apr/2017 07:10:17] "  +&‡     Cookie: mstshash=hello" 400 -
+106.252.229.57 - - [10/Apr/2017 16:51:54] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [10/Apr/2017 16:51:54] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.206 - - [11/Apr/2017 13:17:35] "GET / HTTP/1.1" 200 -
+66.102.6.206 - - [11/Apr/2017 13:17:36] "GET /favicon.ico HTTP/1.1" 200 -
+223.52.114.216 - - [11/Apr/2017 14:18:40] "GET / HTTP/1.1" 200 -
+223.52.114.216 - - [11/Apr/2017 14:18:40] "GET /favicon.ico HTTP/1.1" 200 -
+80.82.77.33 - - [12/Apr/2017 12:59:44] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [12/Apr/2017 14:46:25] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [12/Apr/2017 14:46:25] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.94 - - [13/Apr/2017 00:32:40] "GET / HTTP/1.1" 200 -
+66.102.6.94 - - [13/Apr/2017 00:32:41] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.94 - - [13/Apr/2017 21:03:05] "GET / HTTP/1.1" 200 -
+66.102.6.94 - - [13/Apr/2017 21:03:06] "GET /favicon.ico HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 310, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python2.7/socket.py", line 476, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+66.102.6.64 - - [15/Apr/2017 11:05:00] "GET / HTTP/1.1" 200 -
+66.102.6.64 - - [15/Apr/2017 11:05:00] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.64 - - [17/Apr/2017 17:01:32] "GET / HTTP/1.1" 200 -
+66.102.6.64 - - [17/Apr/2017 17:01:33] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.95 - - [17/Apr/2017 22:48:32] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.64 - - [18/Apr/2017 15:19:12] "GET / HTTP/1.1" 200 -
+66.102.6.64 - - [18/Apr/2017 15:19:13] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.95 - - [19/Apr/2017 16:45:22] "GET / HTTP/1.1" 200 -
+66.102.6.94 - - [19/Apr/2017 16:45:22] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.94 - - [20/Apr/2017 19:03:49] "GET / HTTP/1.1" 200 -
+66.102.6.64 - - [20/Apr/2017 19:03:49] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.94 - - [21/Apr/2017 12:22:45] "GET / HTTP/1.1" 200 -
+66.102.6.94 - - [21/Apr/2017 12:22:45] "GET /favicon.ico HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 310, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python2.7/socket.py", line 476, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Sorry, try again.
+mongod --help for help and startup options
+Wed May 17 11:44:33.972 
+Wed May 17 11:44:33.972 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Wed May 17 11:44:33.972 
+Wed May 17 11:44:33.989 [initandlisten] MongoDB starting : pid=19884 port=27017 dbpath=/data/db/ 32-bit host=rustam-G31M-ES2L
+Wed May 17 11:44:33.989 [initandlisten] 
+Wed May 17 11:44:33.989 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed May 17 11:44:33.989 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed May 17 11:44:33.989 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed May 17 11:44:33.989 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed May 17 11:44:33.989 [initandlisten] 
+Wed May 17 11:44:33.989 [initandlisten] db version v2.4.9
+Wed May 17 11:44:33.989 [initandlisten] git version: nogitversion
+Wed May 17 11:44:33.989 [initandlisten] build info: Linux comet 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 i686 BOOST_LIB_VERSION=1_54
+Wed May 17 11:44:33.989 [initandlisten] allocator: tcmalloc
+Wed May 17 11:44:33.989 [initandlisten] options: {}
+************** 
+Unclean shutdown detected.
+Please visit http://dochub.mongodb.org/core/repair for recovery instructions.
+*************
+Wed May 17 11:44:33.990 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+Wed May 17 11:44:33.990 dbexit: 
+Wed May 17 11:44:33.990 [initandlisten] shutdown: going to close listening sockets...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: going to flush diaglog...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: going to close sockets...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: waiting for fs preallocator...
+Wed May 17 11:44:33.990 [initandlisten] shutdown: closing all files...
+Wed May 17 11:44:33.990 [initandlisten] closeAllFiles() finished
+Wed May 17 11:44:33.990 dbexit: really exiting now
+mongod --help for help and startup options
+Wed May 17 11:44:40.914 
+Wed May 17 11:44:40.915 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Wed May 17 11:44:40.915 
+Wed May 17 11:44:40.931 [initandlisten] MongoDB starting : pid=19891 port=27017 dbpath=/data/db/ 32-bit host=rustam-G31M-ES2L
+Wed May 17 11:44:40.931 [initandlisten] 
+Wed May 17 11:44:40.931 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed May 17 11:44:40.931 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed May 17 11:44:40.931 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed May 17 11:44:40.931 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed May 17 11:44:40.931 [initandlisten] 
+Wed May 17 11:44:40.931 [initandlisten] db version v2.4.9
+Wed May 17 11:44:40.931 [initandlisten] git version: nogitversion
+Wed May 17 11:44:40.931 [initandlisten] build info: Linux comet 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 i686 BOOST_LIB_VERSION=1_54
+Wed May 17 11:44:40.931 [initandlisten] allocator: tcmalloc
+Wed May 17 11:44:40.931 [initandlisten] options: {}
+************** 
+Unclean shutdown detected.
+Please visit http://dochub.mongodb.org/core/repair for recovery instructions.
+*************
+Wed May 17 11:44:40.932 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+Wed May 17 11:44:40.932 dbexit: 
+Wed May 17 11:44:40.932 [initandlisten] shutdown: going to close listening sockets...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: going to flush diaglog...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: going to close sockets...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: waiting for fs preallocator...
+Wed May 17 11:44:40.932 [initandlisten] shutdown: closing all files...
+Wed May 17 11:44:40.932 [initandlisten] closeAllFiles() finished
+Wed May 17 11:44:40.932 dbexit: really exiting now
+mongod --help for help and startup options
+Wed May 17 11:44:48.533 
+Wed May 17 11:44:48.533 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Wed May 17 11:44:48.533 
+Wed May 17 11:44:48.549 [initandlisten] MongoDB starting : pid=19898 port=27017 dbpath=/data/db/ 32-bit host=rustam-G31M-ES2L
+Wed May 17 11:44:48.550 [initandlisten] 
+Wed May 17 11:44:48.550 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed May 17 11:44:48.550 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed May 17 11:44:48.550 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed May 17 11:44:48.550 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed May 17 11:44:48.550 [initandlisten] 
+Wed May 17 11:44:48.550 [initandlisten] db version v2.4.9
+Wed May 17 11:44:48.550 [initandlisten] git version: nogitversion
+Wed May 17 11:44:48.550 [initandlisten] build info: Linux comet 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 i686 BOOST_LIB_VERSION=1_54
+Wed May 17 11:44:48.550 [initandlisten] allocator: tcmalloc
+Wed May 17 11:44:48.550 [initandlisten] options: {}
+************** 
+Unclean shutdown detected.
+Please visit http://dochub.mongodb.org/core/repair for recovery instructions.
+*************
+Wed May 17 11:44:48.550 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+Wed May 17 11:44:48.550 dbexit: 
+Wed May 17 11:44:48.550 [initandlisten] shutdown: going to close listening sockets...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: going to flush diaglog...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: going to close sockets...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: waiting for fs preallocator...
+Wed May 17 11:44:48.550 [initandlisten] shutdown: closing all files...
+Wed May 17 11:44:48.550 [initandlisten] closeAllFiles() finished
+Wed May 17 11:44:48.550 dbexit: really exiting now
+66.102.6.111 - - [26/May/2017 18:34:32] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.109 - - [26/May/2017 18:34:33] "GET / HTTP/1.1" 200 -
+66.102.6.113 - - [26/May/2017 22:23:25] "GET / HTTP/1.1" 200 -
+66.102.6.113 - - [26/May/2017 22:23:26] "GET /favicon.ico HTTP/1.1" 200 -
+27.117.217.82 - - [26/May/2017 22:24:28] "GET / HTTP/1.1" 200 -
+27.117.217.82 - - [26/May/2017 22:24:29] "GET /favicon.ico HTTP/1.1" 200 -
+91.197.235.10 - - [27/May/2017 09:23:16] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'\xe0\x00\x00\x00\x00\x00Cookie:")
+91.197.235.10 - - [27/May/2017 09:23:16] "  ,'‡     Cookie: mstshash=eltons" 400 -
+66.102.6.109 - - [27/May/2017 11:52:17] "GET / HTTP/1.1" 200 -
+66.102.6.109 - - [27/May/2017 11:52:17] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.111 - - [27/May/2017 12:56:15] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.111 - - [28/May/2017 20:34:09] "GET / HTTP/1.1" 200 -
+66.102.6.111 - - [28/May/2017 20:34:10] "GET /favicon.ico HTTP/1.1" 200 -
+27.117.217.82 - - [29/May/2017 01:41:30] "GET / HTTP/1.1" 200 -
+27.117.217.82 - - [29/May/2017 01:41:30] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.113 - - [29/May/2017 06:39:58] "GET /favicon.ico HTTP/1.1" 200 -
+203.249.87.187 - - [29/May/2017 10:07:40] "POST / HTTP/1.1" 200 -
+203.249.87.187 - - [29/May/2017 10:07:40] "POST / HTTP/1.1" 200 -
+66.102.6.113 - - [29/May/2017 14:41:19] "GET / HTTP/1.1" 200 -
+66.102.6.111 - - [29/May/2017 14:41:19] "GET /favicon.ico HTTP/1.1" 200 -
+80.82.77.33 - - [29/May/2017 19:18:30] code 400, message Bad HTTP/0.9 request type ("lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win")
+80.82.77.33 - - [29/May/2017 19:18:30] "lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win XP|'|'|No|'|'|0.6.4|'|'|..|'|'||'|'|[endof]" 400 -
+212.8.245.20 - - [30/May/2017 00:34:28] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+212.8.245.20 - - [30/May/2017 00:34:28] "  +&‡     Cookie: mstshash=hello" 400 -
+212.8.245.20 - - [30/May/2017 01:56:54] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+212.8.245.20 - - [30/May/2017 01:56:54] "  +&‡     Cookie: mstshash=hello" 400 -
+212.8.245.20 - - [30/May/2017 03:19:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&\xe0\x00\x00\x00\x00\x00Cookie:')
+212.8.245.20 - - [30/May/2017 03:19:11] "  +&‡     Cookie: mstshash=hello" 400 -
+66.240.192.138 - - [30/May/2017 10:24:37] code 400, message Bad HTTP/0.9 request type ("lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win")
+66.240.192.138 - - [30/May/2017 10:24:37] "lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win XP|'|'|No|'|'|0.6.4|'|'|..|'|'||'|'|[endof]" 400 -
+66.102.6.109 - - [30/May/2017 19:33:33] "GET / HTTP/1.1" 200 -
+66.102.6.111 - - [30/May/2017 19:33:33] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.111 - - [31/May/2017 16:59:22] "GET / HTTP/1.1" 200 -
+66.102.6.113 - - [31/May/2017 16:59:22] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.111 - - [31/May/2017 19:43:12] "GET /favicon.ico HTTP/1.1" 200 -
+91.211.3.163 - - [02/Jun/2017 02:58:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+91.211.3.163 - - [02/Jun/2017 02:58:47] "  *%‡     Cookie: mstshash=Test" 400 -
+91.211.3.163 - - [02/Jun/2017 02:58:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+91.211.3.163 - - [02/Jun/2017 02:58:47] "  *%‡     Cookie: mstshash=Test" 400 -
+203.130.92.114 - - [02/Jun/2017 19:03:51] code 400, message Bad request version ("Rpv,l\x00\x008\xc0,\xc0+\xc00\xc0/\x00\x9f\x00\x9e\xc0$\xc0#\xc0(\xc0'\xc0")
+203.130.92.114 - - [02/Jun/2017 19:03:51] " Ÿ  ’Y18-¥≈˚ 	ÈéîÔz#πagUcYﬂ%¯ÏRpv,l  8¿,¿+¿0¿/ ü û¿$¿#¿(¿'¿" 400 -
+203.130.92.114 - - [02/Jun/2017 19:03:51] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00\xd9\x01\x00\x00\xd5\x03\x03Y18-R\xcf*-+\x96\x90g3\xf5\x8b\xe4')
+203.130.92.114 - - [02/Jun/2017 19:03:51] " Ÿ  ’Y18-Rœ*-+ñêg3ıã‰ •NXûC™w/]ÿ§i  8¿,¿+¿0¿/ ü û¿$¿#¿(¿'¿" 400 -
+203.130.92.114 - - [02/Jun/2017 19:03:51] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8f\x01\x00\x00\x8b\x03\x01Y18.\x99\xd2\xe2\xc2\xc0ZO\xbe\x99\xeeT\xaew\xa4\x90\xe4=\xfc\xb0G\x84\xef5\xe0TA\xe1\x11\x00\x00\x18\xc0')
+203.130.92.114 - - [02/Jun/2017 19:03:51] " è  ãY18.ô“‚¬¿ZOæôÓTÆw§ê‰=¸∞GÑÔ5‡TA·  ¿" 400 -
+203.130.92.114 - - [02/Jun/2017 19:03:51] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x8f\x01\x00\x00\x8b\x03\x01Y18.\x8b\xcf\x06&\xc9')
+203.130.92.114 - - [02/Jun/2017 19:03:51] " è  ãY18.ãœ&…tYq—÷ë˝XâÇË®ü4à¢Êﬂ]w÷  ¿" 400 -
+203.130.92.114 - - [02/Jun/2017 19:03:58] "GET / HTTP/1.1" 200 -
+203.130.92.114 - - [02/Jun/2017 19:04:44] "GET /favicon.ico HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 310, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python2.7/socket.py", line 476, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+66.102.6.113 - - [02/Jun/2017 22:52:31] "GET / HTTP/1.1" 200 -
+66.102.6.111 - - [02/Jun/2017 22:52:31] "GET /favicon.ico HTTP/1.1" 200 -
+80.82.77.33 - - [05/Jun/2017 10:47:28] code 400, message Bad HTTP/0.9 request type ("lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win")
+80.82.77.33 - - [05/Jun/2017 10:47:28] "lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win XP|'|'|No|'|'|0.6.4|'|'|..|'|'||'|'|[endof]" 400 -
+66.102.6.13 - - [06/Jun/2017 06:47:07] "GET / HTTP/1.1" 200 -
+66.102.6.17 - - [06/Jun/2017 06:47:08] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.15 - - [06/Jun/2017 19:24:59] "GET / HTTP/1.1" 200 -
+66.102.6.17 - - [06/Jun/2017 19:25:00] "GET /favicon.ico HTTP/1.1" 200 -
+89.163.144.14 - - [07/Jun/2017 00:36:20] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+89.163.144.14 - - [07/Jun/2017 00:36:20] "  *%‡     Cookie: mstshash=Test" 400 -
+89.163.144.14 - - [07/Jun/2017 00:37:06] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+89.163.144.14 - - [07/Jun/2017 00:37:06] "  *%‡     Cookie: mstshash=Test" 400 -
+66.102.6.109 - - [07/Jun/2017 10:46:08] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.151 - - [08/Jun/2017 05:52:15] "GET / HTTP/1.1" 200 -
+66.102.6.152 - - [08/Jun/2017 05:52:16] "GET /favicon.ico HTTP/1.1" 200 -
+66.240.219.146 - - [09/Jun/2017 04:24:19] code 400, message Bad HTTP/0.9 request type ("lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win")
+66.240.219.146 - - [09/Jun/2017 04:24:19] "lv|'|'|VHJvamFuX0M0NkY2RTk=|'|'|MARK|'|'|user|'|'|2013-11-22|'|'||'|'|Win XP|'|'|No|'|'|0.6.4|'|'|..|'|'||'|'|[endof]" 400 -
+124.94.25.210 - - [09/Jun/2017 14:20:18] "GET / HTTP/1.1" 200 -
+124.94.25.210 - - [09/Jun/2017 14:20:18] "GET /cgi-bin/timepro.cgi?tmenu=main_frame&smenu=main_frame HTTP/1.1" 200 -
+66.102.6.113 - - [09/Jun/2017 16:16:14] "GET / HTTP/1.1" 200 -
+66.102.6.113 - - [09/Jun/2017 16:16:15] "GET /favicon.ico HTTP/1.1" 200 -
+89.163.144.14 - - [09/Jun/2017 18:51:21] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+89.163.144.14 - - [09/Jun/2017 18:51:21] "  *%‡     Cookie: mstshash=Test" 400 -
+89.163.144.14 - - [09/Jun/2017 18:51:22] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%\xe0\x00\x00\x00\x00\x00Cookie:')
+89.163.144.14 - - [09/Jun/2017 18:51:22] "  *%‡     Cookie: mstshash=Test" 400 -
+66.102.6.152 - - [10/Jun/2017 13:19:15] "GET / HTTP/1.1" 200 -
+66.102.6.151 - - [10/Jun/2017 13:19:16] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.86 - - [11/Jun/2017 18:50:37] "GET / HTTP/1.1" 200 -
+66.102.6.88 - - [11/Jun/2017 18:50:38] "GET /favicon.ico HTTP/1.1" 200 -
+106.252.229.57 - - [12/Jun/2017 11:06:07] "GET / HTTP/1.1" 200 -
+106.252.229.57 - - [12/Jun/2017 11:06:07] "GET /favicon.ico HTTP/1.1" 200 -
+66.102.6.111 - - [14/Jun/2017 10:01:47] "GET /favicon.ico HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:28:26] "GET / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:29:43] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:29:43] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 11:30:10] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:30:10] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:30:14] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:30:14] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:13] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:13] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:14] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:14] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:15] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:15] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:18] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:18] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 11:33:22] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:22] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:23] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:23] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:24] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:24] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:25] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:33:25] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:50:01] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 11:50:01] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 12:05:51] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 12:05:51] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 12:05:52] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 12:05:52] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 12:05:57] "POST / HTTP/1.1" 200 -
+http server is starting ...
+http server is running ...
+Connected to MQTT Broker with result code 0
+subscribed for /keti/energy/statusrequest
+in post method, data_string: ------WebKitFormBoundarylogDpVTAvFaFaLK0
+Content-Disposition: form-data; name="{%22trainID%22"
+
+13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+------WebKitFormBoundarylogDpVTAvFaFaLK0--
+
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('59409fb2eeafa704e756ce42')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('59409fb6eeafa704e756ce43')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a069eeafa704e756ce44')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a06aeeafa704e756ce45')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a06beeafa704e756ce46')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}.
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a072eeafa704e756ce47')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a073eeafa704e756ce48')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a074eeafa704e756ce49')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a075eeafa704e756ce4a')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}.
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}.
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}.
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "mes211.244.23.184 - - [14/Jun/2017 12:05:57] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 12:05:58] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 12:05:58] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 12:10:38] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 12:10:38] "POST / HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 328, in handle_one_request
+    method()
+  File "minwon_server.py", line 145, in do_POST
+    mqtt_client.publish("/keti/energy/minwon", self.data_string)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 980, in publish
+    rc = self._send_publish(local_mid, topic, local_payload, qos, retain, False, info)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 1988, in _send_publish
+    upayload = payload.encode('utf-8')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xed in position 84: ordinal not in range(128)
+211.244.23.184 - - [14/Jun/2017 12:10:39] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 12:10:39] "POST / HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 328, in handle_one_request
+    method()
+  File "minwon_server.py", line 145, in do_POST
+    mqtt_client.publish("/keti/energy/minwon", self.data_string)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 980, in publish
+    rc = self._send_publish(local_mid, topic, local_payload, qos, retain, False, info)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 1988, in _send_publish
+    upayload = payload.encode('utf-8')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xed in position 84: ordinal not in range(128)
+223.39.139.134 - - [14/Jun/2017 12:35:33] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 12:35:33] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 12:35:39] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 12:35:39] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 12:35:45] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 12:35:45] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:21:07] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:21:07] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:46:04] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:46:04] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:46:24] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:46:24] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:47:02] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:47:02] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:49:19] "POST / HTTP/1.1" 200 -
+223.39.139.134 - - [14/Jun/2017 15:49:19] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:53:22] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:53:22] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 15:53:24] "POST / HTTP/1.1" 200 -
+sage":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a815eeafa704e756ce4b')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940a816eeafa704e756ce4c')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"ÌïúÍ∏ÄÏùÑall the complaining texts are here"}
+----------------------------------------
+Exception happened during processing of request from ('211.244.23.184', 50986)
+----------------------------------------
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"ÌïúÍ∏ÄÏùÑall the complaining texts are here"}
+----------------------------------------
+Exception happened during processing of request from ('211.244.23.184', 50987)
+----------------------------------------
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940af05eeafa704e756ce4d')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940af0beeafa704e756ce4e')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940af11eeafa704e756ce4f')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940d5d3eeafa704e756ce50')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940dbaceeafa704e756ce51')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940dbc0eeafa704e756ce52')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940dbe6eeafa704e756ce53')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940dc6feeafa704e756ce54')}
+in post method, data_string: {‚Äútype‚Äù:‚Äù1‚Äù,‚Äútime‚Äù:‚Äù12/Jun/2017 15:15:43‚Äù, "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+in post method, data_string: {‚Äútype‚Äù:‚Äù1‚Äù,‚Äútime‚Äù:‚Ä211.244.23.184 - - [14/Jun/2017 15:53:24] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 15:53:25] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:53:25] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 15:53:26] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:53:26] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 15:53:36] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:53:36] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:54:47] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:54:47] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 15:56:40] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 15:56:40] "POST / HTTP/1.1" 200 -
+66.102.6.109 - - [14/Jun/2017 15:59:01] "GET / HTTP/1.1" 200 -
+66.102.6.109 - - [14/Jun/2017 15:59:02] "GET /favicon.ico HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:05:54] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:05:54] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:05:57] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:05:57] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:06:52] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:06:52] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:07:39] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:07:39] "POST / HTTP/1.1" 400 -
+219.241.136.194 - - [14/Jun/2017 16:07:46] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:07:46] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:08:14] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:08:14] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:08:59] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:08:59] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:08] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:08] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:17] "POST / HTTP/1.1" 200 -
+ù12/Jun/2017 15:15:43‚Äù, "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+in post method, data_string: {‚Äútype‚Äù:‚Äù1‚Äù,‚Äútime‚Äù:‚Äù12/Jun/2017 15:15:43‚Äù, "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+in post method, data_string: {‚Äútype‚Äù:‚Äù1‚Äù,‚Äútime‚Äù:‚Äù12/Jun/2017 15:15:43‚Äù, "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+in post method, data_string: {"trainID":1013, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 1013, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940dd70eeafa704e756ce55')}
+in post method, data_string: {"trainID":1013, "grade1":4, "grade2":2, "grade3":3, "grade4:2, "grade5":2}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940de28eeafa704e756ce56')}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940e052eeafa704e756ce57')}
+in post method, data_string: {"type":"2","time":"12/Jun/2017 15:15:43", "trainID":1001, "grade1":3, "grade2":4, "grade3":5, "grade4":4, "grade5":3}
+{u'trainID': 1001, u'grade1': 3, u'grade3': 5, u'grade2': 4, u'grade5': 3, u'grade4': 4, u'time': u'12/Jun/2017 15:15:43', '_id': ObjectId('5940e055eeafa704e756ce58'), u'type': u'2'}
+in post method, data_string: {"type":"1", "trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940e08ceeafa704e756ce59'), u'type': u'1'}
+in post method, data_string: {"type"adfasdfasd asdf asdf asdfa sdfa sdfasdf :"1", "trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+in post method, data_string: {"type":"1", "trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940e0c2eeafa704e756ce5a'), u'type': u'1'}
+in post method, data_string: {"type":"2","time":"12/Jun/2017 15:15:43", "trainID":1001, "grade1":3, "grade2":4, "grade3":5, "grade4":4, "grade5":3}
+
+{u'trainID': 1001, u'grade1': 3, u'grade3': 5, u'grade2': 4, u'grade5': 3, u'grade4': 4, u'time': u'12/Jun/2017 15:15:43', '_id': ObjectId('5940e0deeeafa704e756ce5b'), u'type': u'2'}
+in post method, data_string: {"type":"1", "trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940e10beeafa704e756ce5c'), u'type': u'1'}
+in post method, data_string: {"type":"1", "trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940e114eeafa704e756ce5d'), u'type': u'1'}
+in post method, data_string: {"trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts ar219.241.136.194 - - [14/Jun/2017 16:09:17] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:29] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:29] "POST / HTTP/1.1" 400 -
+219.241.136.194 - - [14/Jun/2017 16:09:41] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:41] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:09:41] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:09:41] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:09:42] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:09:42] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:47] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:09:47] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:10:14] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:10:14] "POST / HTTP/1.1" 400 -
+219.241.136.194 - - [14/Jun/2017 16:10:25] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:10:25] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:10:53] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:10:53] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:10:54] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:10:54] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:10:54] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:10:54] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:11:17] "POST / HTTP/1.1" 200 -
+211.244.23.184 - - [14/Jun/2017 16:11:17] "POST / HTTP/1.1" 400 -
+211.244.23.184 - - [14/Jun/2017 16:11:24] "POST / HTTP/1.1" 200 -
+e here"}
+
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940e11deeafa704e756ce5e')}
+in post method, data_string: {"type":"1", "trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+
+{"type":"2","time":"12/Jun/2017 15:15:43", "trainID":1001, "grade1grade2":4, "grade3":5, "grade4":4, "grade5":3}
+in post method, data_string: {"type":"1", "trainID":13, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+
+{u'trainID': 13, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'message': u'all the complaining texts are here', '_id': ObjectId('5940e135eeafa704e756ce5f'), u'type': u'1'}
+in post method, data_string: {"type":"1","time":"12/Jun/2017 15:15:43", "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+
+{u'trainID': 1001, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'time': u'12/Jun/2017 15:15:43', u'message': u'all the complaining texts are here', '_id': ObjectId('5940e135eeafa704e756ce60'), u'type': u'1'}
+in post method, data_string: {"type":"1","time":"12/Jun/2017 15:15:43", "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+
+{u'trainID': 1001, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'time': u'12/Jun/2017 15:15:43', u'message': u'all the complaining texts are here', '_id': ObjectId('5940e136eeafa704e756ce61'), u'type': u'1'}
+in post method, data_string: {"type":"2","time":"12/Jun/2017 15:15:43", "trainID":1001, "grade1grade2":4, "grade3":5, "grade4":4, "grade5":3}
+
+{u'trainID': 1001, '_id': ObjectId('5940e13beeafa704e756ce62'), u'grade3': 5, u'grade5': 3, u'grade4': 4, u'time': u'12/Jun/2017 15:15:43', u'grade1grade2': 4, u'type': u'2'}
+in post method, data_string: {"type":"2","time":"12/Jun/2017 15:15:43", "trainID":1001, "grade1":1, grade2":4, "grade3":5, "grade4":4, "grade5":3}
+
+in post method, data_string: {"type":"2","time":"12/Jun/2017 15:15:43", "trainID":1001, "grade1grade2":4, "grade3":5, "grade4":4, "grade5":3}
+
+{u'trainID': 1001, '_id': ObjectId('5940e161eeafa704e756ce63'), u'grade3': 5, u'grade5': 3, u'grade4': 4, u'time': u'12/Jun/2017 15:15:43', u'grade1grade2': 4, u'type': u'2'}
+in post method, data_string: {"type":"1","time":"12/Jun/2017 15:15:43", "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 1001, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'time': u'12/Jun/2017 15:15:43', u'message': u'all the complaining texts are here', '_id': ObjectId('5940e17deeafa704e756ce64'), u'type': u'1'}
+in post method, data_string: {"type":"1","time":"12/Jun/2017 15:15:43", "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 1001, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'time': u'12/Jun/2017 15:15:43', u'message': u'all the complaining texts are here', '_id': ObjectId('5940e17eeeafa704e756ce65'), u'type': u'1'}
+in post method, data_string: {"type":"1","time":"12/Jun/2017 15:15:43", "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}
+{u'trainID': 1001, u'ask_hum': 30, u'ask_temp': 20, u'cur_hum': 60, u'cur_temp': 35, u'time': u'12/Jun/2017 15:15:43', u'message': u'all the complaining texts are here', '_id': ObjectId('5940e17eeeafa704e756ce66'), u'type': u'1'}
+in post method, data_string: {"type":"1","time":"12/Jun/2017 15:15:43", "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the complaining texts are here"}.
+in post method, data_string: {"type":"1","time":"12/Jun/2017 15:15:43", "trainID":1001, "cur_temp":35, "ask_temp":20, "cur_hum":60, "ask_hum":30, "message":"all the compla211.244.23.184 - - [14/Jun/2017 16:11:24] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:11:39] "POST / HTTP/1.1" 200 -
+219.241.136.194 - - [14/Jun/2017 16:11:39] "POST / HTTP/1.1" 200 -
