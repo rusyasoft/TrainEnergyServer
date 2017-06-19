@@ -72,6 +72,28 @@ subway_list.append(subw)
 
 subway_wrap['subway'] = subway_list
 
+# main code
+
+######## mqtt connection and messaging functions #########
+def on_mqtt_connect(client, userdata, flags, rc):
+        print "Connected to MQTT Broker with result code", str(rc)
+
+        client.subscribe("/keti/energy/statusrequest")
+        print "subscribed for /keti/energy/statusrequest"
+
+def on_mqtt_message(client, userdata, msg):
+        if msg.topic == "/keti/energy/statusrequest":
+                client.publish("/keti/energy/systemstatus", '{"nodename":"MinwonServer", "status":"on"}')
+
+
+
+global mqtt_client
+mqtt_client = mqtt.Client()
+mqtt_client.on_connect = on_mqtt_connect
+mqtt_client.on_message = on_mqtt_message
+
+mqtt_client.connect('117.16.136.173', 1883, 600)
+
 class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
    def do_GET(self):
       self.send_response(200)
@@ -105,6 +127,12 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
       self.data_string = self.rfile.read(int(self.headers['Content-Length']))
       print "in post method, data_string:", self.data_string
       
+      try:
+         o = json.loads(self.data_string)
+      except:
+         self.send_response(400)
+         self.end_headers()
+         return 
      
       self.send_response(200)
       self.end_headers()
@@ -113,6 +141,8 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
       data = json.loads(self.data_string)
       #with open("test1234.json", "a") as outfile:
       #   json.dump(data, outfile)
+      global mqtt_client
+      mqtt_client.publish("/keti/energy/minwon", self.data_string)
 
       # storing in MongoDB
       db.insert(data)
@@ -125,22 +155,22 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
 
 
 ######## mqtt connection and messaging functions #########
-def on_mqtt_connect(client, userdata, flags, rc):
-	print "Connected to MQTT Broker with result code", str(rc)
-	
-	client.subscribe("/keti/energy/statusrequest")
-	print "subscribed for /keti/energy/statusrequest"
-
-def on_mqtt_message(client, userdata, msg):
-	if msg.topic == "/keti/energy/statusrequest":
-		client.publish("/keti/energy/systemstatus", '{"nodename":"MinwonServer", "status":"on"}')
+#def on_mqtt_connect(client, userdata, flags, rc):
+#	print "Connected to MQTT Broker with result code", str(rc)
+#	
+#	client.subscribe("/keti/energy/statusrequest")
+#	print "subscribed for /keti/energy/statusrequest"
+#
+#def on_mqtt_message(client, userdata, msg):
+#	if msg.topic == "/keti/energy/statusrequest":
+#		client.publish("/keti/energy/systemstatus", '{"nodename":"MinwonServer", "status":"on"}')
 
 # main code
-mqtt_client = mqtt.Client()
-mqtt_client.on_connect = on_mqtt_connect
-mqtt_client.on_message = on_mqtt_message
-
-mqtt_client.connect('117.16.136.173', 1883, 600)
+#mqtt_client = mqtt.Client()
+#mqtt_client.on_connect = on_mqtt_connect
+#mqtt_client.on_message = on_mqtt_message
+#
+#mqtt_client.connect('117.16.136.173', 1883, 600)
 
 def MQTTStarterThread():
    mqtt_client.loop_start()

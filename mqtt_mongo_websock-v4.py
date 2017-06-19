@@ -29,7 +29,8 @@ import ServerConfiguration
 import ExcelFileLoader
 
 ######## excel processing related global variable, callbackfunction and functions ######
-
+global NUMBER_OF_SENSORS
+NUMBER_OF_SENSORS = 12
 
 #trainNum2ID = dict() # dictionary that will contain train Number and ID mapping table
 def convertTrainList2Dict(trainIDlist):
@@ -113,9 +114,9 @@ def initializeTrainTables(Trains, bigTable):
       subwayNum = trainID      
       Trains[subwayNum] = Train.Train(subwayNum)
 
-      #adding 12 dummy sensor nodes
+      #adding NUMBER_OF_SENSORS dummy sensor nodes
       temporary_temp_int = int(time.strftime("%M"))
-      for i in range(1,13):
+      for i in range(1,NUMBER_OF_SENSORS+1):
          curTrain_DummySensorNode = SensorNode.SensorNode(i, 'TempHum', False)
          curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'farenheit', temporary_temp_int) #13)
          curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int) #13)
@@ -144,6 +145,7 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
 
    #temporary temp
    temporary_temp_int = int(time.strftime("%M"))
+   temporary_hum_int = int(time.strftime("%M"))
 
 
    # if None is returned as a schedule_list then dont bother to do further processing
@@ -167,8 +169,8 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
       stationNum = sublocdir[1]
       dir = sublocdir[2] - 1
     
-      print 'sublocdir', sublocdir
-      print 'Trains =>', Trains 
+      #print 'sublocdir', sublocdir
+      #print 'Trains =>', Trains 
 
       if subwayNum in Trains:
          print 'subway is detected'
@@ -179,18 +181,24 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
          curTrain_SensorNodes = Trains[subwayNum].sensorNodes
          print 'Number of SensorNodes in this train:', len(curTrain_SensorNodes)
          listofTemperatureSensors = list()
+         listofHumiditySensors = list()
          for sensors in curTrain_SensorNodes:
-            print 'curTrain_SensorNodes=>', curTrain_SensorNodes[sensors].sensors
+            #print 'curTrain_SensorNodes=>', curTrain_SensorNodes[sensors].sensors
             listofTemperatureSensors.append(curTrain_SensorNodes[sensors].sensors['temp'])
+            listofHumiditySensors.append(curTrain_SensorNodes[sensors].sensors['hum'])
          
-         numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
+         #numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
+         numofnecessaryDummyTemps = NUMBER_OF_SENSORS - len(listofTemperatureSensors)
 
          #temporary temperature
          for i in range(numofnecessaryDummyTemps):
             temporarySensor = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
             listofTemperatureSensors.append(temporarySensor)
+            temporaryHumiditySensor = Sensor.Sensor('hum', '%', temporary_hum_int)
+            listofHumiditySensors.append(temporaryHumiditySensor)
+         
 
-         print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
+         #print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
 
          subw['T1_1'] = listofTemperatureSensors[0].value
          subw['T1_2'] = listofTemperatureSensors[1].value
@@ -207,6 +215,24 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
          subw['T4_1'] = listofTemperatureSensors[9].value
          subw['T4_2'] = listofTemperatureSensors[10].value
          subw['T4_3'] = listofTemperatureSensors[11].value
+
+         ########## new style is added ######
+         subw['T1ID'] = 1000 + (subwayNum%100)
+         subw['T1TEMP'] = listofTemperatureSensors[0].value
+         subw['T1HUM'] = listofHumiditySensors[0].value
+
+         subw['T2ID'] = 1100 + (subwayNum%100)
+         subw['T2TEMP'] = listofTemperatureSensors[3].value
+         subw['T2HUM'] = listofHumiditySensors[3].value
+
+         subw['T3ID'] = 1200 + (subwayNum%100)
+         subw['T3TEMP'] = listofTemperatureSensors[6].value
+         subw['T3HUM'] = listofHumiditySensors[6].value
+
+         subw['T4ID'] = 1700 + (subwayNum%100)
+         subw['T4TEMP'] = listofTemperatureSensors[9].value
+         subw['T4HUM'] = 0
+         ###################################
 
          subw['Train'] = subwayNum
          subw['work'] = dir #Trains[subwayNum].movingDirection - 1
@@ -214,26 +240,32 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
          subw['_id'] = '1111'
       
       else:
-         print 'subway is not detected'
+         print 'subway is not detected, subwayNum = ', subwayNum
          subw['Area'] = 'Gwangju'
          subw['Location'] = stationNum
 
          
 
          # TODO: now its just fixed somehow, but the logic should be reconsidered
-         curTrain_SensorNodes = SensorNode.SensorNode(13, 'TempHum', False)  #Trains[subwayNum].sensorNodes
+         #curTrain_SensorNodes = SensorNode.SensorNode(13, 'TempHum', False)  #Trains[subwayNum].sensorNodes
+         curTrain_SensorNodes = SensorNode.SensorNode(NUMBER_OF_SENSORS+1, 'TempHum', False)  #Trains[subwayNum].sensorNodes
+
          #print 'Number of SensorNodes in this train:', len(curTrain_SensorNodes)
          listofTemperatureSensors = list()
+         listofHumiditySensors = list()
          #for sensors in curTrain_SensorNodes:
          #   print 'curTrain_SensorNodes=>', curTrain_SensorNodes[sensors].sensors
          #   listofTemperatureSensors.append(curTrain_SensorNodes[sensors].sensors['temp'])
 
-         numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
+         #numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
+         numofnecessaryDummyTemps = NUMBER_OF_SENSORS - len(listofTemperatureSensors)
          for i in range(numofnecessaryDummyTemps):
             temporarySensor = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
             listofTemperatureSensors.append(temporarySensor)
+            temporaryHumiditySensor = Sensor.Sensor('hum', '%', temporary_hum_int)
+            listofHumiditySensors.append(temporaryHumiditySensor)
 
-         print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
+         #print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
 
          subw['T1_1'] = listofTemperatureSensors[0].value
          subw['T1_2'] = listofTemperatureSensors[1].value
@@ -250,6 +282,25 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
          subw['T4_1'] = listofTemperatureSensors[9].value
          subw['T4_2'] = listofTemperatureSensors[10].value
          subw['T4_3'] = listofTemperatureSensors[11].value
+
+
+         ########## new style is added ######
+         subw['T1ID'] = 1000 + (subwayNum%100)
+         subw['T1TEMP'] = listofTemperatureSensors[0].value
+         subw['T1HUM'] = listofHumiditySensors[0].value
+
+         subw['T2ID'] = 1100 + (subwayNum%100)
+         subw['T2TEMP'] = listofTemperatureSensors[3].value
+         subw['T2HUM'] = listofHumiditySensors[0].value
+ 
+         subw['T3ID'] = 1200 + (subwayNum%100)
+         subw['T3TEMP'] = listofTemperatureSensors[6].value
+         subw['T3HUM'] = listofHumiditySensors[6].value
+
+         subw['T4ID'] = 1700 + (subwayNum%100)
+         subw['T4TEMP'] = listofTemperatureSensors[9].value
+         subw['T4HUM'] = listofHumiditySensors[9].value
+         ###################################
 
          subw['Train'] = subwayNum
          subw['work'] = dir # #Trains[subwayNum].movingDirection - 1
@@ -260,7 +311,7 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
       subway_list.append(subw)
 
    subway_wrap['subway'] = subway_list
-   print 'subway_wrap=>', subway_wrap
+   #print 'subway_wrap=>', subway_wrap
    json_response = json.dumps(subway_wrap)
    
    return json_response
@@ -293,12 +344,12 @@ def on_message(client, userdata, msg):
 
 
    #debugging purpose
-   print 'o=',o
+   #print 'o=',o
 
    #playing with Train class
-   print 'sensorID = ', o["SensorID"]
+   #print 'sensorID = ', o["SensorID"]
    tid = int(o["TrainID"]) #string type converted to int
-   print 'trainID = ', tid
+   #print 'trainID = ', tid
 
    liveness = False
    if o["Status"]=="On":
@@ -316,7 +367,7 @@ def on_message(client, userdata, msg):
       sname = "temp"
       smeasurement = "farenheit"
       svalue = o["temp"]
-      print 'temp=>', svalue
+      #print 'temp=>', svalue
       #tempSensor = Sensor(sname, smeasurement, svalue)
       sensorModules[sname] =  Sensor.Sensor(sname, smeasurement, svalue)
 
@@ -327,19 +378,17 @@ def on_message(client, userdata, msg):
       sensorModules[sname] = Sensor.Sensor(sname, smeasurement, svalue)
 
       sNode.setCurrentStatus(liveness, sensorModules)
-      print 'sensorModules:',sensorModules
-      print 'sNode is set', sNode.sensors
+      #print 'sensorModules:',sensorModules
+      #print 'sNode is set', sNode.sensors
       
 
    if tid in Trains:
-      print "use existing TRAIN------------------------"
+      #print "use existing TRAIN------------------------"
       Trains[tid].setSensorNodeStatus(liveness, sNode)
    else:
-      print 'Create new TRAIN++++++++++++++++++++++++++++'
+      #print 'Create new TRAIN++++++++++++++++++++++++++++'
       Trains[tid] = Train.Train(tid)
       Trains[tid].setSensorNodeStatus(liveness, sNode)
-
-   print 'Trains->',Trains
 
 
    # testing wrapSubwayTotalInfo function
