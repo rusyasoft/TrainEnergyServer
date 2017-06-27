@@ -50,8 +50,10 @@ Excel_filename = serverConfiguration.getExcelFileNameForSchedule()
 print 'Excel Folder =', Excel_foldername, 'and filename =', Excel_filename
 
 excelFileLoader = ExcelFileLoader.ExcelFileLoader()
-trainIDList = excelFileLoader.loadfile(Excel_foldername + '/' + Excel_filename)
-trainNum2ID = convertTrainList2Dict(trainIDList)
+#trainIDList = excelFileLoader.loadfile(Excel_foldername + '/' + Excel_filename)
+trainNum2ID = excelFileLoader.loadfile(Excel_foldername + '/' + Excel_filename)
+print trainNum2ID
+#trainNum2ID = convertTrainList2Dict(trainIDList)
 
 # in order to start file validator that will watch the we need to create new thread
 
@@ -97,9 +99,10 @@ def on_connect(client, userdata, flags, rc):
 
    client.subscribe("/keti/energy/fromgw")
    client.subscribe("/keti/energy/statusrequest")
+   client.subscribe("/keti/energy/fromtguserapp")
    print "Subscribed to topic /keti/energy/fromgw"
 
-Trains = dict() #dictionaries of Train, key is trainID
+#Trains = dict() #dictionaries of Train, key is trainID
 
 # load the Big Train schedule table
 bigTable = BigScheduleTable.BigScheduleTable()
@@ -107,7 +110,7 @@ bigTable.loadFromCSV('schedule.csv')
 
 
 ###### Trains should be initialized with dummy data #######
-
+"""
 def initializeTrainTables(Trains, bigTable):
 
    for trainID in bigTable.subwayIds:
@@ -119,7 +122,7 @@ def initializeTrainTables(Trains, bigTable):
       for i in range(1,NUMBER_OF_SENSORS+1):
          curTrain_DummySensorNode = SensorNode.SensorNode(i, 'TempHum', False)
          curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'farenheit', temporary_temp_int) #13)
-         curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int) #13)
+         curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int+1) #13)
          Trains[subwayNum].sensorNodes[i] = curTrain_DummySensorNode
 
 
@@ -127,6 +130,8 @@ def initializeTrainTables(Trains, bigTable):
 
 ###########################################################
 initializeTrainTables(Trains, bigTable)
+"""
+Trains = bigTable.initializeTrainTables(NUMBER_OF_SENSORS)
 
 
 
@@ -145,9 +150,7 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
 
    #temporary temp
    temporary_temp_int = int(time.strftime("%M"))
-   temporary_hum_int = int(time.strftime("%M"))
-
-
+   temporary_hum_int = int(time.strftime("%M"))+2 # just for distinguishing with temporary_temp_int
    # if None is returned as a schedule_list then dont bother to do further processing
    # just return no Train Available at this time
    if schedule_list == None:
@@ -338,7 +341,13 @@ def on_message(client, userdata, msg):
    if msg.topic=="/keti/energy/statusrequest":
       client.publish("/keti/energy/systemstatus", '{"nodename":"MainServer", "status":"on"}')
       return 
+   if msg.topic == "/keti/energy/fromtguserapp":
+      jsondumps = wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+      client.publish("/keti/energy/totguserapp", jsondumps)
+      return
    print msg.topic,"->", str(msg.payload)
+
+   # the case: /keti/energy/fromgw
 
    o = json.loads(msg.payload)
 
@@ -354,7 +363,8 @@ def on_message(client, userdata, msg):
    liveness = False
    if o["Status"]=="On":
       liveness = True
-
+   
+   """
    snid = int(o["SensorID"])
    sNodeName = o["SensorName"]
    sNode = SensorNode.SensorNode(snid, sNodeName, liveness)
@@ -380,7 +390,9 @@ def on_message(client, userdata, msg):
       sNode.setCurrentStatus(liveness, sensorModules)
       #print 'sensorModules:',sensorModules
       #print 'sNode is set', sNode.sensors
-      
+   
+   """
+   sNode = SensorNode.SensorNode(jsonPayload=msgPayload)
 
    if tid in Trains:
       #print "use existing TRAIN------------------------"

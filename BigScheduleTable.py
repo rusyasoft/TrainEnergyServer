@@ -1,6 +1,10 @@
 import time
 from openpyxl import load_workbook
 
+import Train
+import SensorNode
+import Sensor
+
 class BigScheduleTable(object):
    def __init__(self):
       self.scheduleTable = dict()
@@ -86,6 +90,21 @@ class BigScheduleTable(object):
 
       #return scheduleTable[timeInpStr]
 
+   #returns Train[] array which contains the train object initialized with dummy sensors
+   def initializeTrainTables(self, NumberOfSensors):
+      Trains = dict()
+      for trainID in self.subwayIds:
+         subwayNum = trainID
+         Trains[subwayNum] = Train.Train(subwayNum)
+
+         #adding NUMBER_OF_SENSORS dummy sensor nodes
+         temporary_temp_int = int(time.strftime("%M"))
+         for i in range(1, NumberOfSensors + 1):
+            curTrain_DummySensorNode = SensorNode.SensorNode(i, 'TempHum', False)
+            curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
+            curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int+1)
+            Trains[subwayNum].sensorNodes[i] = curTrain_DummySensorNode
+      return Trains
 
 """ Example code 
 

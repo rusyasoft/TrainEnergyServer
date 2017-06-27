@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import os
 import json
@@ -130,27 +133,35 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
       try:
          o = json.loads(self.data_string)
       except:
+         print "Exception happened: ", self.data_string
          self.send_response(400)
          self.end_headers()
          return 
      
       self.send_response(200)
       self.end_headers()
+      if "type" in o:
+         if o["type"] == '2':
+            self.wfile.write("The Survey Successfully Received!\n")
+         else:
+            self.wfile.write("The Complaint Successfully Received!\n")
+      else:
+         self.wfile.write("The Complaint Successfully Received!\n")
 
 
       data = json.loads(self.data_string)
       #with open("test1234.json", "a") as outfile:
       #   json.dump(data, outfile)
       global mqtt_client
-      mqtt_client.publish("/keti/energy/minwon", self.data_string)
+      mqtt_client.publish("/keti/energy/minwon", bytearray(self.data_string) )
 
       # storing in MongoDB
       db.insert(data)
 
-      print "{}".format(data)
+      print "result:", "{}".format(data)
       #f = open("for_presen.py")
       #self.wfile.write(f.read())
-      self.wfile.write("result")
+      #self.wfile.write("result")
       return
 
 
@@ -183,8 +194,8 @@ t.start()
 
 
 #connect mongodb
-#mongo_client = MongoClient('energy.openlab.kr', 27017)
-#db = mongo_client.keti_energy_db.UserMinwon
+mongo_client = MongoClient('energy.openlab.kr', 27017)
+db = mongo_client.keti_energy_db.UserMinwon
 
 print "http server is starting ..."
 server_address = ("", 4000)

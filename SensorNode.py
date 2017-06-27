@@ -1,11 +1,45 @@
 import Sensor
 
 class SensorNode(object):
-   def __init__(self, sensornid, sensornodename, isalive):
-      self.sensorNodeId = sensornid
-      self.sensors = dict()
-      self.sensorNodeName = sensornodename
-      self.is_alive = isalive
+   def __init__(self, sensornid=-1, sensornodename=None, isalive=False, jsonPayload = None):
+      if jsonPayload == None:
+         self.sensorNodeId = sensornid
+         self.sensors = dict()
+         self.sensorNodeName = sensornodename
+         self.is_alive = isalive
+      else:
+         try:
+            json2dict = json.loads(jsonPayload)
+            tid = int(json2dict["TrainID"])
+            self.is_alive = False
+            if json2dict["Status"]=="On":
+               self.is_alive = True
+            self.sensorNodeId = int(json2dict["SensorID"])
+            self.sensorNodeName = json2dict["SensorName"]
+
+            # process sensors modules
+            if self.sensorNodeName == "TempHum":
+               sensorModules = dict()
+               sname = "temp"
+               smeasurement = "farenheit"
+               svalue = json2dict["temp"]
+               sensorModules[sname] = Sensor.Sensor(sname, smeasurement, svalue)
+
+               sname = "hum"
+               smeasurement = "%"
+               svalue = json2dict["hum"]
+               sensorModules[sname] = Sensor.Sensor(sname, smeasurement, svalue)
+
+               self.setCurrentStatus(self.is_alive, sensorModules)
+
+               return self
+            else:
+               print "Unrecognized sensor node: ", self.sensorNodeName
+
+         except:
+            print "Error at SensorNode.init()."
+
+      return None
 
    def setCurrentStatus(self, isalive, inp_sensors ): #isalive:bool, inp_sensors: list of Sensor
       self.is_alive = isalive
