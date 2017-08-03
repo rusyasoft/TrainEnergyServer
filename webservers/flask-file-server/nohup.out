@@ -1,0 +1,370 @@
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+203.254.173.42 - - [02/Jul/2017 20:32:43] "GET /download/keti.apk HTTP/1.1" 200 -
+106.252.229.57 - - [02/Jul/2017 20:32:48] "GET /download HTTP/1.1" 200 -
+106.252.229.57 - - [02/Jul/2017 20:32:48] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+149.154.167.167 - - [02/Jul/2017 20:32:52] "GET /download/keti.apk HTTP/1.1" 200 -
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+106.252.229.57 - - [02/Jul/2017 20:33:38] "GET /download HTTP/1.1" 200 -
+106.252.229.57 - - [02/Jul/2017 20:33:38] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+106.252.229.57 - - [02/Jul/2017 20:33:56] "GET /download HTTP/1.1" 200 -
+106.252.229.57 - - [02/Jul/2017 20:33:56] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /download HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/js/custom.js HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:23] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+203.254.173.42 - - [02/Jul/2017 20:34:24] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+203.254.173.42 - - [02/Jul/2017 20:34:24] "GET /favicon.ico HTTP/1.1" 404 -
+66.102.6.125 - - [02/Jul/2017 20:37:42] "GET / HTTP/1.1" 404 -
+203.254.173.42 - - [02/Jul/2017 20:42:33] "GET / HTTP/1.1" 404 -
+203.254.173.42 - - [02/Jul/2017 20:46:31] "GET / HTTP/1.1" 404 -
+203.254.173.42 - - [02/Jul/2017 20:46:40] "GET / HTTP/1.1" 404 -
+198.20.70.114 - - [02/Jul/2017 22:05:27] "GET / HTTP/1.1" 404 -
+198.20.70.114 - - [02/Jul/2017 22:05:27] "GET /robots.txt HTTP/1.1" 404 -
+198.20.70.114 - - [02/Jul/2017 22:05:28] "GET /sitemap.xml HTTP/1.1" 404 -
+60.191.38.77 - - [02/Jul/2017 22:05:39] "GET / HTTP/1.1" 404 -
+186.232.208.236 - - [03/Jul/2017 00:48:51] "GET / HTTP/1.1" 404 -
+118.244.237.33 - - [03/Jul/2017 00:55:10] "POST / HTTP/1.1" 404 -
+118.244.237.33 - - [03/Jul/2017 00:55:10] "POST /index.action HTTP/1.1" 404 -
+118.244.237.33 - - [03/Jul/2017 00:55:12] "POST /login.action HTTP/1.1" 404 -
+118.244.237.33 - - [03/Jul/2017 00:55:12] "POST / HTTP/1.1" 404 -
+118.244.237.33 - - [03/Jul/2017 00:55:13] "POST /index.action HTTP/1.1" 404 -
+118.244.237.33 - - [03/Jul/2017 00:55:13] "POST /login.action HTTP/1.1" 404 -
+141.212.122.64 - - [03/Jul/2017 02:33:41] "GET /x HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /download HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:20] "GET /assets/js/custom.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:21] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:54:21] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:54:21] "GET /favicon.ico HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:54:50] "POST /download HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:55:13] "GET /download HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:55:14] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:56:19] "GET /download HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:20] "GET /assets/js/custom.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:21] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:56:21] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:56:21] "GET /favicon.ico HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:56:35] "GET /KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:56:41] "GET /KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:56:53] "GET /download/KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+223.52.82.46 - - [03/Jul/2017 09:56:55] "GET /download/KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:50] "GET /download HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:51] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:51] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:52] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:52] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:52] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:52] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:52] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:53] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:53] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:59:53] "GET /assets/js/custom.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:54] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 09:59:55] "GET /KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 09:59:55] "GET /favicon.ico HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 10:01:56] "GET / HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 10:01:56] "GET /favicon.ico HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 10:02:00] "GET /download HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:00] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:00] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:00] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:00] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:00] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:00] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:01] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:01] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:01] "GET /assets/js/custom.js HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:01] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 10:02:02] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+223.52.82.46 - - [03/Jul/2017 10:02:03] "GET /KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 404 -
+223.52.82.46 - - [03/Jul/2017 10:02:13] "GET /download/KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+223.52.82.46 - - [03/Jul/2017 10:02:15] "GET /download/KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:21] "GET /download HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:21] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:21] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:21] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:21] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:21] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:21] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:22] "GET /assets/js/custom.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:22] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:22] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:23] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+223.54.254.190 - - [03/Jul/2017 10:44:23] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:44:23] "GET /favicon.ico HTTP/1.1" 404 -
+211.231.103.107 - - [03/Jul/2017 10:45:34] "GET / HTTP/1.1" 404 -
+223.39.131.178 - - [03/Jul/2017 10:45:35] "GET / HTTP/1.1" 404 -
+223.39.131.178 - - [03/Jul/2017 10:45:35] "GET /favicon.ico HTTP/1.1" 404 -
+218.157.64.38 - - [03/Jul/2017 10:45:35] "GET / HTTP/1.1" 404 -
+218.157.64.38 - - [03/Jul/2017 10:45:35] "GET /favicon.ico HTTP/1.1" 404 -
+218.157.64.38 - - [03/Jul/2017 10:45:54] "GET / HTTP/1.1" 404 -
+218.157.64.38 - - [03/Jul/2017 10:45:54] "GET /favicon.ico HTTP/1.1" 404 -
+223.54.254.190 - - [03/Jul/2017 10:48:04] "GET /download HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:04] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:05] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:05] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:05] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:05] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:05] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:06] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:07] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+223.54.254.190 - - [03/Jul/2017 10:48:07] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:07] "GET /assets/js/custom.js HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:08] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+223.54.254.190 - - [03/Jul/2017 10:48:09] "GET /KETI_Engergy_Project_06_20170703.apk HTTP/1.1" 404 -
+223.54.254.190 - - [03/Jul/2017 10:48:09] "GET /favicon.ico HTTP/1.1" 404 -
+175.223.30.169 - - [03/Jul/2017 10:49:27] "GET / HTTP/1.1" 404 -
+175.223.30.169 - - [03/Jul/2017 10:49:28] "GET / HTTP/1.1" 404 -
+175.223.30.169 - - [03/Jul/2017 10:49:29] "GET / HTTP/1.1" 404 -
+175.223.30.169 - - [03/Jul/2017 10:49:30] "GET / HTTP/1.1" 404 -
+175.223.30.169 - - [03/Jul/2017 10:49:36] "GET / HTTP/1.1" 404 -
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+223.57.196.139 - - [05/Jul/2017 11:13:36] "GET /download/keti.apk HTTP/1.1" 200 -
+223.39.138.51 - - [05/Jul/2017 11:17:05] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:05] "GET /favicon.ico HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:07] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:08] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:08] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:08] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:08] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:09] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:13] "GET / HTTP/1.1" 404 -
+223.39.138.51 - - [05/Jul/2017 11:17:14] "GET /favicon.ico HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:20:25] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:20:25] "GET /favicon.ico HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:26:53] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:26:53] "GET /favicon.ico HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:28:56] "GET /favicon.ico HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:33] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:34] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:35] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:36] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:36] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:37] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:37] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:37] "GET / HTTP/1.1" 404 -
+223.57.254.228 - - [05/Jul/2017 11:31:37] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:44] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:45] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:45] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:46] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:47] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:47] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:47] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:48] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:31:49] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:43:15] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:43:16] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:45:54] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:45:59] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:45:59] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:50:13] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:50:14] "GET / HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:50:28] "GET /:3000 HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:53:49] "GET /:3000 HTTP/1.1" 404 -
+223.39.130.78 - - [05/Jul/2017 11:54:04] "GET /download/keti.apk HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+223.39.130.78 - - [05/Jul/2017 11:54:05] "GET /download/keti.apk HTTP/1.1" 200 -
+211.36.157.34 - - [05/Jul/2017 11:55:57] "GET /download/keti.apk HTTP/1.1" 200 -
+223.57.196.139 - - [05/Jul/2017 11:56:09] "GET /download/keti.apk HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+223.52.177.234 - - [05/Jul/2017 12:17:16] "GET /download/keti.apk HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+175.249.49.99 - - [05/Jul/2017 12:37:39] "GET / HTTP/1.1" 404 -
+175.223.36.211 - - [05/Jul/2017 12:37:40] "GET / HTTP/1.1" 404 -
+175.223.36.211 - - [05/Jul/2017 12:37:42] "GET / HTTP/1.1" 404 -
+119.116.205.3 - - [05/Jul/2017 14:03:08] "GET / HTTP/1.1" 404 -
+119.116.205.3 - - [05/Jul/2017 14:03:09] "GET /cgi-bin/timepro.cgi?tmenu=main_frame&smenu=main_frame HTTP/1.1" 404 -
+196.52.43.62 - - [05/Jul/2017 19:01:17] "GET / HTTP/1.0" 404 -
+209.126.136.4 - - [05/Jul/2017 22:27:37] "GET / HTTP/1.1" 404 -
+38.107.180.164 - - [06/Jul/2017 00:47:10] "GET / HTTP/1.1" 404 -
+141.212.122.32 - - [06/Jul/2017 06:54:09] "GET / HTTP/1.1" 404 -
+66.102.6.144 - - [06/Jul/2017 08:52:13] "GET / HTTP/1.1" 404 -
+66.102.6.144 - - [06/Jul/2017 08:52:13] "GET / HTTP/1.1" 404 -
+66.102.6.146 - - [06/Jul/2017 09:33:01] "GET /download HTTP/1.1" 200 -
+66.102.6.145 - - [06/Jul/2017 09:33:02] "GET /favicon.ico HTTP/1.1" 404 -
+66.102.6.144 - - [06/Jul/2017 09:33:02] "GET /download HTTP/1.1" 200 -
+66.102.6.144 - - [06/Jul/2017 09:33:03] "GET /assets/js/tether.min.js HTTP/1.1" 200 -
+66.102.6.146 - - [06/Jul/2017 09:33:03] "GET /assets/css/listr.pack.css HTTP/1.1" 200 -
+66.102.6.144 - - [06/Jul/2017 09:33:03] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 200 -
+66.102.6.145 - - [06/Jul/2017 09:33:03] "GET /assets/js/jquery.min.js HTTP/1.1" 200 -
+66.102.6.146 - - [06/Jul/2017 09:33:03] "GET /assets/js/custom.js HTTP/1.1" 200 -
+66.102.6.144 - - [06/Jul/2017 09:33:03] "GET /assets/js/listr.pack.js HTTP/1.1" 200 -
+66.102.6.144 - - [06/Jul/2017 09:33:03] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+66.102.6.144 - - [06/Jul/2017 09:33:03] "GET /assets/css/jquery.filer.css HTTP/1.1" 200 -
+66.102.6.145 - - [06/Jul/2017 09:33:03] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 200 -
+66.102.6.145 - - [06/Jul/2017 09:33:04] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+66.102.6.144 - - [06/Jul/2017 09:33:04] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 200 -
+38.107.180.164 - - [06/Jul/2017 12:40:56] "GET / HTTP/1.1" 404 -
+115.29.166.101 - - [06/Jul/2017 12:47:15] "GET /phpmyadmin HTTP/1.1" 404 -
+201.48.190.253 - - [06/Jul/2017 15:03:10] "GET / HTTP/1.1" 404 -
+38.107.180.164 - - [06/Jul/2017 15:43:13] "GET / HTTP/1.1" 404 -
+222.186.190.122 - - [06/Jul/2017 16:32:06] "GET / HTTP/1.1" 404 -
+38.107.180.164 - - [06/Jul/2017 16:33:57] "GET / HTTP/1.1" 404 -
+38.107.180.164 - - [06/Jul/2017 17:54:29] "GET / HTTP/1.1" 404 -
+52.77.238.28 - - [06/Jul/2017 19:26:05] "GET / HTTP/1.1" 404 -
+109.201.142.109 - - [06/Jul/2017 19:56:45] "GET / HTTP/1.1" 404 -
+169.229.3.91 - - [06/Jul/2017 22:27:44] code 400, message Bad HTTP/0.9 request type ('}\x92\xc8\xbd\x82m7B$\x91{\xfb\x83{n\xcb\xc6j\xece\xe9\xcdx\xf5\x8e2\x8c9')
+169.229.3.91 - - [06/Jul/2017 22:27:44] "}í»ΩÇm7B$ë{˚É{nÀ∆jÏeÈÕxıé2å9O˘k ŒÊ1[€€Ê€Ò∞ˇ‹hΩÇ©n÷#ÃôàDΩ€ÙıÅë" 400 -
+60.191.38.77 - - [07/Jul/2017 00:25:46] "GET / HTTP/1.1" 404 -
+117.88.107.108 - - [07/Jul/2017 01:11:34] "GET /currentsetting.htm HTTP/1.1" 404 -
+94.102.49.175 - - [07/Jul/2017 06:48:31] "GET /muieblackcat HTTP/1.1" 404 -
+94.102.49.175 - - [07/Jul/2017 06:48:31] "GET //phpMyAdmin/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [07/Jul/2017 06:48:32] "GET //phpmyadmin/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [07/Jul/2017 06:48:32] "GET //pma/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [07/Jul/2017 06:48:33] "GET //myadmin/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [07/Jul/2017 06:48:33] "GET //MyAdmin/scripts/setup.php HTTP/1.1" 404 -
+38.107.180.164 - - [07/Jul/2017 10:11:52] "GET / HTTP/1.1" 404 -
+139.162.119.197 - - [07/Jul/2017 10:20:01] "GET / HTTP/1.1" 404 -
+38.107.180.164 - - [07/Jul/2017 10:55:18] "GET / HTTP/1.1" 404 -
+38.107.180.164 - - [07/Jul/2017 13:45:18] "GET / HTTP/1.1" 404 -
+38.107.180.164 - - [07/Jul/2017 15:58:38] "GET / HTTP/1.1" 404 -
+106.252.229.57 - - [07/Jul/2017 16:31:42] "GET / HTTP/1.1" 404 -
+66.102.6.144 - - [07/Jul/2017 16:37:35] "GET /download HTTP/1.1" 200 -
+66.102.6.145 - - [07/Jul/2017 16:37:37] "GET /favicon.ico HTTP/1.1" 404 -
+106.252.229.57 - - [07/Jul/2017 16:53:01] "GET / HTTP/1.1" 404 -
+106.252.229.57 - - [07/Jul/2017 16:53:01] "GET /favicon.ico HTTP/1.1" 404 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /download HTTP/1.1" 200 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/css/listr.pack.css HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/css/jquery.filer.css HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/js/jquery.min.js HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/js/listr.pack.js HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/js/tether.min.js HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/js/bootstrap.min.js HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/js/jquery.filer.min.js HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/js/custom.js HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/fonts/jquery.filer-icons/jquery-filer.css HTTP/1.1" 304 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 -
+106.252.229.57 - - [07/Jul/2017 16:53:05] "GET /assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 304 -
+170.254.144.164 - - [07/Jul/2017 16:58:52] "GET / HTTP/1.1" 404 -
+106.252.229.57 - - [07/Jul/2017 17:34:37] "GET /download/keti.apk HTTP/1.1" 200 -
+169.229.3.91 - - [07/Jul/2017 19:33:04] code 400, message Bad request version ('8\x82\xa2\x85\xee\xee\xf2\\\xf5\xf6\xc6\x177\x0e\xa1\x8a\x82\xfe\xd7\x03\xaf\xbb{\x98\x99\xd1\xc1\x17\xa4Pu\xe1\x90\xf5\xdf')
+169.229.3.91 - - [07/Jul/2017 19:33:04] "˘BwwÀS9x •ΩààÄøÆE2∆∞öJ 8Ç¢ÖÓÓÚ\ıˆ∆7°äÇ˛◊Øª{òô—¡§Pu·êıﬂ" 400 -
+114.6.66.115 - - [07/Jul/2017 20:31:14] "GET / HTTP/1.0" 404 -
+112.126.64.52 - - [07/Jul/2017 21:43:29] "GET / HTTP/1.1" 404 -
+191.180.138.149 - - [08/Jul/2017 00:14:12] "GET /hndUnblock.cgi HTTP/1.0" 404 -
+191.180.138.149 - - [08/Jul/2017 00:14:13] "GET /tmUnblock.cgi HTTP/1.0" 404 -
+191.180.138.149 - - [08/Jul/2017 00:14:14] "GET /moo HTTP/1.0" 404 -
+110.10.219.83 - - [08/Jul/2017 05:25:25] "GET / HTTP/1.1" 404 -
+71.6.202.204 - - [08/Jul/2017 08:46:12] "GET / HTTP/1.1" 404 -
+196.52.43.58 - - [08/Jul/2017 09:25:49] "GET / HTTP/1.0" 404 -
+221.195.1.140 - - [08/Jul/2017 10:18:45] "GET /phpmyadmin HTTP/1.1" 404 -
+191.96.249.136 - - [08/Jul/2017 19:29:56] "GET /phpmyadmin/scripts/setup.php HTTP/1.0" 404 -
+94.23.253.188 - - [08/Jul/2017 19:37:07] "GET / HTTP/1.1" 404 -
+164.132.91.1 - - [08/Jul/2017 20:19:10] "GET / HTTP/1.1" 404 -
+89.248.172.16 - - [08/Jul/2017 20:20:19] "GET / HTTP/1.1" 404 -
+89.248.172.16 - - [08/Jul/2017 20:20:21] "GET /robots.txt HTTP/1.1" 404 -
+89.248.172.16 - - [08/Jul/2017 20:20:24] "GET /sitemap.xml HTTP/1.1" 404 -
+66.102.6.211 - - [08/Jul/2017 20:22:40] "GET /download HTTP/1.1" 200 -
+66.102.6.213 - - [08/Jul/2017 20:22:40] "GET /favicon.ico HTTP/1.1" 404 -
+103.62.31.130 - - [09/Jul/2017 08:42:22] "GET / HTTP/1.1" 404 -
+223.105.4.249 - - [09/Jul/2017 14:13:20] "GET http://112.124.116.170:83/index.php HTTP/1.1" 404 -
+139.162.114.70 - - [09/Jul/2017 20:47:03] "GET / HTTP/1.1" 404 -
+171.34.218.215 - - [09/Jul/2017 21:21:56] "GET / HTTP/1.0" 404 -
+123.245.88.134 - - [09/Jul/2017 21:22:30] "GET / HTTP/1.1" 404 -
+5.153.132.250 - - [09/Jul/2017 22:45:24] "GET / HTTP/1.1" 404 -
+141.212.122.48 - - [10/Jul/2017 05:42:46] "GET /x HTTP/1.1" 404 -
+185.110.132.239 - - [10/Jul/2017 07:33:14] "GET / HTTP/1.1" 404 -
+184.204.44.235 - - [10/Jul/2017 07:36:44] "GET / HTTP/1.0" 404 -
+184.204.44.235 - - [10/Jul/2017 07:36:46] "GET / HTTP/1.0" 404 -
+94.102.49.175 - - [10/Jul/2017 07:38:13] "GET /muieblackcat HTTP/1.1" 404 -
+94.102.49.175 - - [10/Jul/2017 07:38:13] "GET //phpMyAdmin/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [10/Jul/2017 07:38:14] "GET //phpmyadmin/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [10/Jul/2017 07:38:14] "GET //pma/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [10/Jul/2017 07:38:15] "GET //myadmin/scripts/setup.php HTTP/1.1" 404 -
+94.102.49.175 - - [10/Jul/2017 07:38:15] "GET //MyAdmin/scripts/setup.php HTTP/1.1" 404 -
+106.252.229.57 - - [10/Jul/2017 09:59:39] "GET / HTTP/1.1" 404 -
+109.201.142.109 - - [10/Jul/2017 10:01:48] "GET / HTTP/1.1" 404 -
+106.252.229.57 - - [10/Jul/2017 10:03:24] "GET /download/keti.apk HTTP/1.1" 200 -
+106.252.229.57 - - [10/Jul/2017 10:05:00] "GET / HTTP/1.1" 404 -
+106.252.229.57 - - [10/Jul/2017 10:05:02] "GET / HTTP/1.1" 404 -
+106.252.229.57 - - [10/Jul/2017 10:05:05] "GET / HTTP/1.1" 404 -
