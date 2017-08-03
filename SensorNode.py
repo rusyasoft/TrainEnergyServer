@@ -1,13 +1,14 @@
 import Sensor
+import json
 
 class SensorNode(object):
    def __init__(self, sensornid=-1, sensornodename=None, isalive=False, jsonPayload = None):
-      if jsonPayload == None:
-         self.sensorNodeId = sensornid
-         self.sensors = dict()
-         self.sensorNodeName = sensornodename
-         self.is_alive = isalive
-      else:
+      self.sensorNodeId = sensornid
+      self.sensors = dict()
+      self.sensorNodeName = sensornodename
+      self.is_alive = isalive
+
+      if jsonPayload != None:
          try:
             json2dict = json.loads(jsonPayload)
             tid = int(json2dict["TrainID"])
@@ -21,7 +22,7 @@ class SensorNode(object):
             if self.sensorNodeName == "TempHum":
                sensorModules = dict()
                sname = "temp"
-               smeasurement = "farenheit"
+               smeasurement = "celsius"
                svalue = json2dict["temp"]
                sensorModules[sname] = Sensor.Sensor(sname, smeasurement, svalue)
 
@@ -31,13 +32,12 @@ class SensorNode(object):
                sensorModules[sname] = Sensor.Sensor(sname, smeasurement, svalue)
 
                self.setCurrentStatus(self.is_alive, sensorModules)
-
-               return self
+               #return self
             else:
                print "Unrecognized sensor node: ", self.sensorNodeName
 
-         except:
-            print "Error at SensorNode.init()."
+         except Exception, e:
+            print "Error at SensorNode.init().", str(e)
 
       return None
 
@@ -46,18 +46,18 @@ class SensorNode(object):
       #if isalive == True:
       #print 'len(inp_sensors) = ', len(inp_sensors)
       #print 'inp_sensors:', inp_sensors
-      #print 'self.sensors:', self.sensors
+      print 'self.sensors:', self.sensors
       for s_name in inp_sensors:
-         #print "s_name= ",s_name
-         #print "sensorname, sensor :", inp_sensors[s_name].sensorname, inp_sensors[s_name].measurement, inp_sensors[s_name].value #, inp_sensors[s_id]
+         print "s_name= ",s_name
+         print "sensorname, sensor :", inp_sensors[s_name].sensorname, inp_sensors[s_name].measurement, inp_sensors[s_name].value #, inp_sensors[s_id]
          if s_name in self.sensors:
-            #print "using existing Sensor.Sensor"
+            print "using existing Sensor.Sensor value =", inp_sensors[s_name].value 
             self.sensors[s_name].sensorname = inp_sensors[s_name].sensorname
             self.sensors[s_name].measurement = inp_sensors[s_name].measurement
-            self.sensors[s_name].value = inp_sensors[s_name].value
+            self.sensors[s_name].value = int(inp_sensors[s_name].value)
          else:
-            #print "creation of New Sensor.Sensor"
-            self.sensors[s_name] = Sensor.Sensor(inp_sensors[s_name].sensorname, inp_sensors[s_name].measurement, inp_sensors[s_name].value)
+            print "creation of New Sensor.Sensor value = ", inp_sensors[s_name].value
+            self.sensors[s_name] = Sensor.Sensor(inp_sensors[s_name].sensorname, inp_sensors[s_name].measurement, int(inp_sensors[s_name].value))
          #self.sensors[s_]
 
    def dummyTempHumStatus(self, isalive):

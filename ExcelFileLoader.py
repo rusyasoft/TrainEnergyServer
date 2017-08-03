@@ -29,11 +29,11 @@ class ExcelFileLoader(object):
 			self.trainIDcolumn.append( (self.sheet.cell(row=i, column=2).value, self.sheet.cell(row=i, column=3).value) )
 		#return self.trainIDcolumn
 		#converting list to dictionary
-		self.trainIDDict = dict()
+		self.trainNum2ID = dict()
 		for val1, val2 in self.trainIDcolumn:
-			self.trainIDDict[int(val1)] = int(val2)
+			self.trainNum2ID[int(val1)] = int(val2)
 		#print "result of convertion from list of trains to dicitionary ->", trainIDDict
-		return self.trainIDDict
+		return self.trainNum2ID
 
     
 

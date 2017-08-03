@@ -15,10 +15,10 @@ class Train(object):
    def setSensorNodeStatus(self, isalive, sensorNode): #sensorNode: SensorNode 
       if sensorNode.sensorNodeId in self.sensorNodes:
          #TODO: hope there is no problem at overwriting existing dictionary value again and again
-         #print("setSensorNodeStatus debug1")
+         print("setSensorNodeStatus sensorNode Exist")
          self.sensorNodes[sensorNode.sensorNodeId].setCurrentStatus(isalive, sensorNode.sensors)
       else:
-         #print("setSensorNodeStatus debug2")
+         print("setSensorNodeStatus sensorNode not Exist")
          self.sensorNodes[sensorNode.sensorNodeId] = sensorNode
          
 

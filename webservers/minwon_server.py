@@ -81,12 +81,12 @@ subway_wrap['subway'] = subway_list
 def on_mqtt_connect(client, userdata, flags, rc):
         print "Connected to MQTT Broker with result code", str(rc)
 
-        client.subscribe("/keti/energy/statusrequest")
+        client.subscribe("/keti/energy/statusrequest",1)
         print "subscribed for /keti/energy/statusrequest"
 
 def on_mqtt_message(client, userdata, msg):
         if msg.topic == "/keti/energy/statusrequest":
-                client.publish("/keti/energy/systemstatus", '{"nodename":"MinwonServer", "status":"on"}')
+            client.publish("/keti/energy/systemstatus", '{"nodename":"MinwonServer", "status":"on"}',1)
 
 
 
@@ -145,6 +145,8 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
             self.wfile.write("The Survey Successfully Received!\n")
          else:
             self.wfile.write("The Complaint Successfully Received!\n")
+            global mqtt_client
+            mqtt_client.publish("/keti/energy/minwon", bytearray(self.data_string) )
       else:
          self.wfile.write("The Complaint Successfully Received!\n")
 
@@ -152,8 +154,6 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
       data = json.loads(self.data_string)
       #with open("test1234.json", "a") as outfile:
       #   json.dump(data, outfile)
-      global mqtt_client
-      mqtt_client.publish("/keti/energy/minwon", bytearray(self.data_string) )
 
       # storing in MongoDB
       db.insert(data)

@@ -91,19 +91,22 @@ class BigScheduleTable(object):
       #return scheduleTable[timeInpStr]
 
    #returns Train[] array which contains the train object initialized with dummy sensors
-   def initializeTrainTables(self, NumberOfSensors):
+   def initializeTrainTables(self,TrainNum2ID, NumberOfSensors):
       Trains = dict()
       for trainID in self.subwayIds:
          subwayNum = trainID
-         Trains[subwayNum] = Train.Train(subwayNum)
+         subwayID = TrainNum2ID[subwayNum]
+         Trains[subwayID] = Train.Train(subwayID)
 
+         """  DO not create any sensors for the New Train
          #adding NUMBER_OF_SENSORS dummy sensor nodes
-         temporary_temp_int = int(time.strftime("%M"))
+         temporary_temp_int = 0 #int(time.strftime("%M"))
          for i in range(1, NumberOfSensors + 1):
             curTrain_DummySensorNode = SensorNode.SensorNode(i, 'TempHum', False)
-            curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
-            curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int+1)
+            curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'celcius', temporary_temp_int)
+            curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int)
             Trains[subwayNum].sensorNodes[i] = curTrain_DummySensorNode
+         """
       return Trains
 
 """ Example code 

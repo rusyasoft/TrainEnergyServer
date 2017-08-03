@@ -4,6 +4,8 @@
 #changelog: 20170420 - adding file watcher and reactor
 
 from flask import Flask
+from gevent.wsgi import WSGIServer
+
 
 import paho.mqtt.client as mqtt
 import json
@@ -56,26 +58,28 @@ print 'Excel Folder =', Excel_foldername, 'and filename =', Excel_filename
 excelFileLoader = ExcelFileLoader.ExcelFileLoader()
 #trainIDList = excelFileLoader.loadfile(Excel_foldername + '/' + Excel_filename)
 trainNum2ID = excelFileLoader.loadfile(Excel_foldername + '/' + Excel_filename)
-print trainNum2ID
-#trainNum2ID = convertTrainList2Dict(trainIDList)
 
+print 'TrainNum2ID: ', trainNum2ID
+#### another quick fix -> converting back from trainID to trainNum
+ID2TrainNum = dict()
+for t in trainNum2ID:
+    ID2TrainNum[trainNum2ID[t]] = t
+print 'ID2TrainNum: ', ID2TrainNum
+##################################################################
+
+#trainNum2ID = convertTrainList2Dict(trainIDList)
 # in order to start file validator that will watch the we need to create new thread
 
 def excelFileChanged_callback(evpath, evname):
-	global trainNum2ID
-	print "new Excel File has been uploaded: newpath=", evpath, "new file name = ", evname
-
-	# saving folder and filenames into configuration file
-	serverConfiguration.setExcelFileNameForSchedule(evname)
-
-
-	excelfileloader = ExcelFileLoader.ExcelFileLoader()
-	trainIDs = excelfileloader.loadfile(evpath+'/'+evname)
-	#TODO: convert trainIDs to trainNum2ID
-	trainNum2ID = convertTrainList2Dict(trainIDs)
-
-	for l in trainNum2ID:
-		print str(l) + "->" + str(trainNum2ID[l])
+    global trainNum2ID
+    print "new Excel File has been uploaded: newpath=", evpath, "new file name = ", evname
+    # saving folder and filenames into configuration file
+    serverConfiguration.setExcelFileNameForSchedule(evname)
+    excelfileloader = ExcelFileLoader.ExcelFileLoader()
+    trainNum2ID = excelfileloader.loadfile(evpath+'/'+evname)
+    Trains = bigTable.initializeTrainTables(trainNum2ID,NUMBER_OF_SENSORS)
+    for l in trainNum2ID:
+        print str(l) + "->" + str(trainNum2ID[l])    
 
 #def ExcelFileValidatorThreadStarter():
 #	excelFileValidator = ExcelFileValidator.ExcelFileValidator( Excel_foldername, Excel_filename , excelFileChanged_callback)
@@ -101,10 +105,10 @@ remote_web_socket_clients = dict()
 def on_connect(client, userdata, flags, rc):
    print "Connected to MQTT Broker with result code ", str(rc)
 
-   client.subscribe("/keti/energy/fromgw")
-   client.subscribe("/keti/energy/statusrequest")
-   client.subscribe("/keti/energy/fromtguserapp")
-   print "Subscribed to topic /keti/energy/fromgw"
+   #client.subscribe("/keti/energy/fromgw")
+   #client.subscribe("/keti/energy/statusrequest", 1)
+   #client.subscribe("/keti/energy/fromtguserapp")
+   #print "Subscribed to topic /keti/energy/fromgw"
 
 #Trains = dict() #dictionaries of Train, key is trainID
 
@@ -114,28 +118,7 @@ bigTable.loadFromCSV('schedule.csv')
 
 
 ###### Trains should be initialized with dummy data #######
-"""
-def initializeTrainTables(Trains, bigTable):
-
-   for trainID in bigTable.subwayIds:
-      subwayNum = trainID      
-      Trains[subwayNum] = Train.Train(subwayNum)
-
-      #adding NUMBER_OF_SENSORS dummy sensor nodes
-      temporary_temp_int = int(time.strftime("%M"))
-      for i in range(1,NUMBER_OF_SENSORS+1):
-         curTrain_DummySensorNode = SensorNode.SensorNode(i, 'TempHum', False)
-         curTrain_DummySensorNode.sensors['temp'] = Sensor.Sensor('temp', 'farenheit', temporary_temp_int) #13)
-         curTrain_DummySensorNode.sensors['hum'] = Sensor.Sensor('hum', '%', temporary_temp_int+1) #13)
-         Trains[subwayNum].sensorNodes[i] = curTrain_DummySensorNode
-
-
-   #subway_wrap['subway'] = subway_list
-
-###########################################################
-initializeTrainTables(Trains, bigTable)
-"""
-Trains = bigTable.initializeTrainTables(NUMBER_OF_SENSORS)
+Trains = bigTable.initializeTrainTables(trainNum2ID,NUMBER_OF_SENSORS)
 
 
 
@@ -149,12 +132,16 @@ Trains = bigTable.initializeTrainTables(NUMBER_OF_SENSORS)
 ############### http webserver class declaration ############
 
 def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "hh:mm" format
+   #test flag for checking zero value
+   testFlag = 1
+
+
    json_response = ""
    schedule_list = bigTable.requestCurrentStatus(str_curtime)
 
    #temporary temp
-   temporary_temp_int = int(time.strftime("%M"))
-   temporary_hum_int = int(time.strftime("%M"))+2 # just for distinguishing with temporary_temp_int
+   temporary_temp_int = 0# 25 + int(time.strftime("%M"))%10
+   temporary_hum_int =  0# 40 + int(time.strftime("%M"))%10 # just for distinguishing with temporary_temp_int
    # if None is returned as a schedule_list then dont bother to do further processing
    # just return no Train Available at this time
    if schedule_list == None:
@@ -162,51 +149,47 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
       return '{"response_msg": "No Subway available at this time"}'
 
    subway_wrap = dict()
-   #subw = dict()
    subway_list = list()
 
-   #print 'schedule_list = ', schedule_list
+   print 'Trains: ', Trains
 
    for sublocdir in schedule_list:
       subw = dict()
-      #original code#subwayNum = sublocdir[0]
       #converting to subwayID
-      subwayNum = trainNum2ID[int(sublocdir[0])]
+      #TODO: quick fix #original code #
+      #subwayNum = trainNum2ID[int(sublocdir[0])]
+      #TrainID has been converted to three digits from four digits. at Gateway itself
+      subwayNum = int(sublocdir[0])
+      subID = trainNum2ID[int(sublocdir[0])]
 
       stationNum = sublocdir[1]
       dir = sublocdir[2] - 1
     
-      #print 'sublocdir', sublocdir
-      #print 'Trains =>', Trains 
-
-      if subwayNum in Trains:
-         print 'subway is detected'
+      if subID in Trains:
+         print 'subway is detected', subID, "(" , trainNum2ID[subwayNum] , ")"
          subw['Area'] = 'Gwangju'
          subw['Location'] = stationNum
 
          # TODO: now its just fixed somehow, but the logic should be reconsidered
-         curTrain_SensorNodes = Trains[subwayNum].sensorNodes
+         curTrain_SensorNodes = Trains[subID].sensorNodes
          print 'Number of SensorNodes in this train:', len(curTrain_SensorNodes)
          listofTemperatureSensors = list()
          listofHumiditySensors = list()
          for sensors in curTrain_SensorNodes:
-            #print 'curTrain_SensorNodes=>', curTrain_SensorNodes[sensors].sensors
             listofTemperatureSensors.append(curTrain_SensorNodes[sensors].sensors['temp'])
             listofHumiditySensors.append(curTrain_SensorNodes[sensors].sensors['hum'])
          
-         #numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
-         numofnecessaryDummyTemps = NUMBER_OF_SENSORS - len(listofTemperatureSensors)
+         if len(curTrain_SensorNodes) < NUMBER_OF_SENSORS:
+            numofnecessaryDummyTemps = NUMBER_OF_SENSORS - len(listofTemperatureSensors)
+            #temporary temperature
+            for i in range(numofnecessaryDummyTemps):
+                temporarySensor = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
+                listofTemperatureSensors.append(temporarySensor)
+                temporaryHumiditySensor = Sensor.Sensor('hum', '%', temporary_hum_int)
+                listofHumiditySensors.append(temporaryHumiditySensor)
+            print "******** Fake Sensors values are generated **********"
 
-         #temporary temperature
-         for i in range(numofnecessaryDummyTemps):
-            temporarySensor = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
-            listofTemperatureSensors.append(temporarySensor)
-            temporaryHumiditySensor = Sensor.Sensor('hum', '%', temporary_hum_int)
-            listofHumiditySensors.append(temporaryHumiditySensor)
          
-
-         #print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
-
          subw['T1_1'] = listofTemperatureSensors[0].value
          subw['T1_2'] = listofTemperatureSensors[1].value
          subw['T1_3'] = listofTemperatureSensors[2].value
@@ -224,55 +207,46 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
          subw['T4_3'] = listofTemperatureSensors[11].value
 
          ########## new style is added ######
-         subw['T1ID'] = 1000 + (subwayNum%100)
-         subw['T1TEMP'] = listofTemperatureSensors[0].value
-         subw['T1HUM'] = listofHumiditySensors[0].value
+         subw['T1ID'] = 1000 + (subID%100)
+         subw['T1TEMP'] = (listofTemperatureSensors[1].value + listofTemperatureSensors[2].value)/2
+         subw['T1HUM'] = (listofHumiditySensors[1].value + listofHumiditySensors[2].value)/2
 
-         subw['T2ID'] = 1100 + (subwayNum%100)
-         subw['T2TEMP'] = listofTemperatureSensors[3].value
-         subw['T2HUM'] = listofHumiditySensors[3].value
+         subw['T2ID'] = 1100 + (subID%100)
+         subw['T2TEMP'] = (listofTemperatureSensors[3].value + listofTemperatureSensors[4].value + listofTemperatureSensors[5].value)/3
+         subw['T2HUM'] = (listofHumiditySensors[3].value + listofHumiditySensors[4].value + listofHumiditySensors[5].value)/3
 
-         subw['T3ID'] = 1200 + (subwayNum%100)
-         subw['T3TEMP'] = listofTemperatureSensors[6].value
-         subw['T3HUM'] = listofHumiditySensors[6].value
+         subw['T3ID'] = 1200 + (subID%100)
+         subw['T3TEMP'] = (listofTemperatureSensors[6].value + listofTemperatureSensors[7].value + listofTemperatureSensors[8].value) / 3
+         subw['T3HUM'] = (listofHumiditySensors[6].value + listofHumiditySensors[7].value + listofHumiditySensors[8].value) / 3
 
-         subw['T4ID'] = 1700 + (subwayNum%100)
-         subw['T4TEMP'] = listofTemperatureSensors[9].value
-         subw['T4HUM'] = 0
+         subw['T4ID'] = 1700 + (subID%100)
+         subw['T4TEMP'] = (listofTemperatureSensors[9].value + listofTemperatureSensors[10].value + listofTemperatureSensors[11].value) / 3
+         subw['T4HUM'] = (listofHumiditySensors[9].value + listofHumiditySensors[10].value + listofHumiditySensors[11].value) / 3
+         
          ###################################
-
-         subw['Train'] = subwayNum
+         subw['Train'] = subID
          subw['work'] = dir #Trains[subwayNum].movingDirection - 1
-
          subw['_id'] = '1111'
-      
       else:
-         print 'subway is not detected, subwayNum = ', subwayNum
+         print 'subway is not detected, subwayID = ', subID
          subw['Area'] = 'Gwangju'
          subw['Location'] = stationNum
 
-         
-
          # TODO: now its just fixed somehow, but the logic should be reconsidered
-         #curTrain_SensorNodes = SensorNode.SensorNode(13, 'TempHum', False)  #Trains[subwayNum].sensorNodes
          curTrain_SensorNodes = SensorNode.SensorNode(NUMBER_OF_SENSORS+1, 'TempHum', False)  #Trains[subwayNum].sensorNodes
 
-         #print 'Number of SensorNodes in this train:', len(curTrain_SensorNodes)
          listofTemperatureSensors = list()
          listofHumiditySensors = list()
          #for sensors in curTrain_SensorNodes:
          #   print 'curTrain_SensorNodes=>', curTrain_SensorNodes[sensors].sensors
          #   listofTemperatureSensors.append(curTrain_SensorNodes[sensors].sensors['temp'])
 
-         #numofnecessaryDummyTemps = 12-len(listofTemperatureSensors)
          numofnecessaryDummyTemps = NUMBER_OF_SENSORS - len(listofTemperatureSensors)
          for i in range(numofnecessaryDummyTemps):
             temporarySensor = Sensor.Sensor('temp', 'farenheit', temporary_temp_int)
             listofTemperatureSensors.append(temporarySensor)
             temporaryHumiditySensor = Sensor.Sensor('hum', '%', temporary_hum_int)
             listofHumiditySensors.append(temporaryHumiditySensor)
-
-         #print 'len of listofTemperatureSensors =>', len(listofTemperatureSensors)
 
          subw['T1_1'] = listofTemperatureSensors[0].value
          subw['T1_2'] = listofTemperatureSensors[1].value
@@ -290,47 +264,73 @@ def wrapSubwayTotalInfo(Trains, bigTable, str_curtime):  # str_curtime must be "
          subw['T4_2'] = listofTemperatureSensors[10].value
          subw['T4_3'] = listofTemperatureSensors[11].value
 
-
          ########## new style is added ######
-         subw['T1ID'] = 1000 + (subwayNum%100)
+         subw['T1ID'] = 1000 + (subID%100)
          subw['T1TEMP'] = listofTemperatureSensors[0].value
          subw['T1HUM'] = listofHumiditySensors[0].value
 
-         subw['T2ID'] = 1100 + (subwayNum%100)
+         subw['T2ID'] = 1100 + (subID%100)
          subw['T2TEMP'] = listofTemperatureSensors[3].value
-         subw['T2HUM'] = listofHumiditySensors[0].value
+         subw['T2HUM'] = listofHumiditySensors[3].value
  
-         subw['T3ID'] = 1200 + (subwayNum%100)
+         subw['T3ID'] = 1200 + (subID%100)
          subw['T3TEMP'] = listofTemperatureSensors[6].value
          subw['T3HUM'] = listofHumiditySensors[6].value
 
-         subw['T4ID'] = 1700 + (subwayNum%100)
+         subw['T4ID'] = 1700 + (subID%100)
          subw['T4TEMP'] = listofTemperatureSensors[9].value
          subw['T4HUM'] = listofHumiditySensors[9].value
          ###################################
 
-         subw['Train'] = subwayNum
-         subw['work'] = dir # #Trains[subwayNum].movingDirection - 1
+         #REMOVE IT AFTER TEST: this is test code in order to check the zero value
+         if testFlag > 0:
+            subw['T1ID'] = 1000 + (subID%100)
+            subw['T1TEMP'] = 0
+            subw['T1HUM'] = 0
 
+            subw['T2ID'] = 1100 + (subID%100)
+            subw['T2TEMP'] = 0
+            subw['T2HUM'] = 0
+ 
+            subw['T3ID'] = 1200 + (subID%100)
+            subw['T3TEMP'] = 0
+            subw['T3HUM'] = 0
+
+            subw['T4ID'] = 1700 + (subID%100)
+            subw['T4TEMP'] = 0
+            subw['T4HUM'] = 0
+            testFlag -= 1
+         ###############################
+
+         subw['Train'] = subID
+         subw['work'] = dir #Trains[subwayNum].movingDirection - 1
          subw['_id'] = '1111'
-
-
       subway_list.append(subw)
 
    subway_wrap['subway'] = subway_list
-   #print 'subway_wrap=>', subway_wrap
    json_response = json.dumps(subway_wrap)
    
    return json_response
 
+SubwayListCaching = dict()
+def wrapSubwayTotalInfoCaching(Trains, bigTable, reqtime):
+    print 'reqtime = ', str(reqtime)
+    if str(reqtime) not in SubwayListCaching:
+        SubwayListCaching[str(reqtime)] = wrapSubwayTotalInfo(Trains, bigTable, reqtime)
+    
+    return SubwayListCaching[str(reqtime)]
+    
 
 @app.route("/")
 def mainserver():
-    return wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+    #return wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+    return wrapSubwayTotalInfoCaching(Trains, bigTable, time.strftime("%H:%M"))
+    
 
 @app.route("/Gwangju/Temperature")
 def mainserver2():
-    return wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+    #return wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+    return wrapSubwayTotalInfoCaching(Trains, bigTable, time.strftime("%H:%M"))
 
 
 class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
@@ -345,14 +345,64 @@ class KETI_HTTPRequestHandler(BaseHTTPRequestHandler):
       self.wfile.write(jsondumps) #json.dumps(subway_wrap))
       return
 
+def on_message_statusrequest(client, userdata, msg):
+    client.publish("/keti/energy/systemstatus", '{"nodename":"MainServer", "status":"on"}', 1)
 
+def on_message_fromtguserapp(client, userdata, msg):
+    jsondumps = wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
+    client.publish("/keti/energy/totguserapp", jsondumps)
 
+def on_message_fromgw(client, userdata, msg):
+    print "fromgw: ", msg.topic, " ->", msg.payload
+    try:
+        o = json.loads(msg.payload)
+        #tid = ID2TrainNum[int(o["TrainID"])] #string type converted to int
+        tid = int(o["TrainID"]) #string type converted to int
+        #print 'trainID = ', tid
+        liveness = False
+        if o["Status"]=="On":
+            liveness = True
+        sNode = SensorNode.SensorNode(jsonPayload=msg.payload)
+
+        
+        if tid in Trains:
+            print "use existing TRAIN------------------------"
+            Trains[tid].setSensorNodeStatus(liveness, sNode)
+            print "saved: tid =",tid, "sensor nodes: ", Trains[tid].sensorNodes
+        else:
+            print 'Create new TRAIN++++++++++++++++++++++++++++'
+            Trains[tid] = Train.Train(tid)
+            Trains[tid].setSensorNodeStatus(liveness, sNode)
+        
+        #TODO: at this point the values were not updates so, we are creating new sensorNode everytime (not efficient)
+        #print 'Create new TRAIN++++++++++++++++++++++++++++'
+        #Trains[tid] = Train.Train(tid)
+        #Trains[tid].setSensorNodeStatus(liveness, sNode)
+        
+        # mongoDB related operations
+        userdata.insert(o)
+        #results = userdata.find()
+        #for record in results:
+        #   print 'record = ', record
+
+        if len(remote_web_socket_clients)>0:
+            for id in remote_web_socket_clients:
+                remote_web_socket_clients[id].sendMessage(unicode(msg.payload))
+            print 'Message sent to WebSocketClients'
+
+    except:
+        print "exception happend at on_message_fromgw()"
 
 def on_message(client, userdata, msg):
+    #print msg.topic,"->", str(msg.payload)
+    pass
+
+
+def deprecated_on_message(client, userdata, msg):
 
    # check for the status request message
    if msg.topic=="/keti/energy/statusrequest":
-      client.publish("/keti/energy/systemstatus", '{"nodename":"MainServer", "status":"on"}')
+      client.publish("/keti/energy/systemstatus", '{"nodename":"MainServer", "status":"on"}', 1)
       return 
    if msg.topic == "/keti/energy/fromtguserapp":
       jsondumps = wrapSubwayTotalInfo(Trains, bigTable, time.strftime("%H:%M"))
@@ -370,8 +420,8 @@ def on_message(client, userdata, msg):
 
    #playing with Train class
    #print 'sensorID = ', o["SensorID"]
-   tid = int(o["TrainID"]) #string type converted to int
-   #print 'trainID = ', tid
+   tid = ID2TrainNum[int(o["TrainID"])] #string type converted to int
+   print 'trainID = ', tid
 
    liveness = False
    if o["Status"]=="On":
@@ -405,13 +455,14 @@ def on_message(client, userdata, msg):
       #print 'sNode is set', sNode.sensors
    
    """
-   sNode = SensorNode.SensorNode(jsonPayload=msgPayload)
+
+   sNode = SensorNode.SensorNode(jsonPayload=msg.payload)
 
    if tid in Trains:
-      #print "use existing TRAIN------------------------"
+      print "use existing TRAIN------------------------"
       Trains[tid].setSensorNodeStatus(liveness, sNode)
    else:
-      #print 'Create new TRAIN++++++++++++++++++++++++++++'
+      print 'Create new TRAIN++++++++++++++++++++++++++++'
       Trains[tid] = Train.Train(tid)
       Trains[tid].setSensorNodeStatus(liveness, sNode)
 
@@ -475,12 +526,17 @@ db = mongo_client.keti_energy_db.temphumCOL
 
 
 mqtt_client = mqtt.Client(userdata=db)
+
+mqtt_client.message_callback_add("/keti/energy/statusrequest/#", on_message_statusrequest)
+mqtt_client.message_callback_add("/keti/energy/fromtguserapp/#", on_message_fromtguserapp)
+mqtt_client.message_callback_add("/keti/energy/fromgw/#", on_message_fromgw)
+
 mqtt_client.on_connect = on_connect
 mqtt_client.on_message = on_message
 
 mqtt_client.connect('117.16.136.173', 1883, 600)
 
-
+res = mqtt_client.subscribe("/keti/energy/#")
 
 #client = MongoClient('117.16.136.173', 27017)
 
@@ -523,10 +579,12 @@ mongo_client.close()
 """
 
 if __name__ == '__main__':
-    app.run(
-        host="0.0.0.0",
-        port=int("3001")
-    )
+    #app.run(
+    #    host="0.0.0.0",
+    #    port=int("3001")
+    #)
+    http_server= WSGIServer(('', 3001), app)
+    http_server.serve_forever()
 
 
 #print 'Starting MQTT...'
